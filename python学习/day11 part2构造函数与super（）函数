@@ -1,0 +1,96 @@
+class falcons:
+    def __init__(self,x,y):
+        self.x=x  #就是通过self把外部属性x绑定给x
+        self.y=y
+    def add(self):
+        return self.x+self.y
+    def mul(self):
+        return self.x*self.y
+
+niko=falcons(2,2)
+print(niko.add())
+monesy=falcons(3,2)
+print(monesy.mul())
+#result：
+4
+6
+#也就是说，可以通过__init__(self,x,y):的方式帮你直接绑定属性给实例，而不用自己手动改
+class falcons:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def add(self):
+        return self.x+self.y
+    def mul(self):
+        return self.x*self.y
+
+class spirit(falcons):
+    def __init__(self,x,y,z):
+        falcons.__init__(self,x,y)   #通过.__init__的方式可以直接省去写self.x=x
+        self.z=z                     #在类falcons里没有绑定的实例仍然要绑定
+    def add(self):
+        return falcons.add(self)+self.z  #直接调用父类falcons，千万不要忘了self
+    def mul(self):
+        return falcons.mul(self)*self.z
+
+donk=spirit(7,1,3)
+print(donk.add())
+print(donk.mul())
+#格式非常容易出错
+#由于类的继承会出现钻石继承，所以需要使用super函数
+#下面是钻石继承的典型案例：
+class moon:
+    def __init__(self):
+        print("小乐")
+
+class sun(moon):
+    def __init__(self):
+        moon.__init__(self)
+        print("小辉")
+
+class star(moon):
+    def __init__(self):
+        moon.__init__(self)
+        print("廖总")
+
+class cloud(sun,star):
+    def __init__(self):
+        sun.__init__(self)
+        star.__init__(self)
+        print(" 牢猪")
+
+faker=cloud()
+print(faker)
+#result：小乐
+小辉
+小乐
+廖总
+ 牢猪
+#里面小乐被打印了两遍，因为cloud同时继承了两个父类，而两个父类又继承了一个父类，所有最开始的父类被打印了两次
+#要解决这个难点就是通过把上面麻烦的调用类的代码换成super().__init__()
+class moon:
+    def __init__(self):
+        print("小乐")
+
+class sun(moon):
+    def __init__(self):
+        super().__init__()  #千万注意绝对不能在.__init__()里的()里写self
+        print("小辉")
+
+class star(moon):
+    def __init__(self):
+        super().__init__()
+        print("廖总")
+
+class cloud(sun,star):
+    def __init__(self):
+        super().__init__() #注意之前要调用两个父类的代码直接被优化成一个了
+        print(" 牢猪")
+
+faker=cloud()
+print(faker)
+#result: 小乐
+廖总
+小辉
+ 牢猪
+         
