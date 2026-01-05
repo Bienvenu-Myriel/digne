@@ -93,4 +93,6 @@ print(faker)
 廖总
 小辉
  牢猪
-         
+
+#super()函数严重依赖mro，可以通过在类的后面加上.mro来查看mro顺序
+#比如moon.mro或者cloud.mro
