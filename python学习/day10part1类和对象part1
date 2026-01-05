@@ -135,3 +135,8 @@ t1.final()
 sakiko：真是高高在上呢
 我从来没有觉得组乐队开心过
 这里没有人类了
+
+#可以通过.__dict__来“自省”也就是看看这个类里面有什么
+print(crychic.__dict__)
+
+#result：{'__module__': '__main__', '__firstlineno__': 20, 'play4': <function crychic.play4 at 0x000002D261909B10>, '__static_attributes__': (), '__dict__': <attribute '__dict__' of 'crychic' objects>, '__weakref__': <attribute '__weakref__' of 'crychic' objects>, '__doc__': None}
