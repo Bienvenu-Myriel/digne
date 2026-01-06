@@ -26,7 +26,8 @@ class falcons:
 
 class spirit(falcons):
     def __init__(self,x,y,z):
-        falcons.__init__(self,x,y)   #通过.__init__的方式可以直接省去写self.x=x
+        falcons.__init__(self,x,y)   #通过.__init__的方式可以直接省去写self.x=x，但是后来又学了super函数
+#上面的代码可以改为：super().__init__(x,y)   注意这里的（）里只能填两个字符串或者变量或者数字，但是不能填3个或者2个，因为父类falcons里有两个形参
         self.z=z                     #在类falcons里没有绑定的实例仍然要绑定
     def add(self):
         return falcons.add(self)+self.z  #直接调用父类falcons，千万不要忘了self
