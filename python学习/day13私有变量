@@ -1,16 +1,17 @@
 #python没有真正意义上的私有变量，_var	单下划线（伪私有）	约定俗成的 “私有”，不建议类外访问，但实际可访问，__var	双下划线（强私有）	解释器会重命名，类外直接访问失败，子类也无法直接访问。
+# 父类：定义双下划线私有变量 + 公有访问方法
 class Parent:
     def __init__(self):
-        self.device = "父类核心私有数据"  # 双下划线私有变量
+        self.__device = "父类核心私有数据"  # 双下划线私有变量
 
     # 父类提供的公有方法（getter），用于访问私有变量
     def donk(self):  #访问私有变量的方法名为donk
-        return self.device
+        return self.__device
 
     # 可选：公有方法（setter），用于修改私有变量（带校验）
     def monesy(self, new_value):
         if isinstance(new_value, str) and len(new_value) > 0:
-            self.device = new_value
+            self.__device = new_value
         else:
             raise ValueError("值必须是非空字符串")
 
