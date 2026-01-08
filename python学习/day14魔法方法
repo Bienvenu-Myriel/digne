@@ -1,0 +1,12 @@
+class mygo(str):
+    #这里的str是python自带的内置类，专门用来处理字符串
+    def __new__(cls,string):
+        #__new__(cls)是不可变的格式，new创建了实例对象,cls就是类的缩写，所有不用像__init__一样要用self把局部参数string赋值给实例对象string
+        string=string.upper()
+        #.upper()就是让这个实例对象大写
+        return super().__new__(cls,string)
+        #通过super（）函数让父类str来处理string
+
+cs=mygo("anon_chihaya")
+print(cs)
+#result：ANON_CHIHAYA
