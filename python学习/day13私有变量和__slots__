@@ -35,3 +35,23 @@ child.zywoo("子类修改后的父类私有数据")
 print(child.dupreeh())  # 输出：子类修改后的父类私有数据
 
 #私有变量需要通过直接包含这个变量的类来访问，不能通过子类直接访问但可以在子类里通过父类的公有方法访问
+class mygo:
+    __slots__=["anon","soyo"]
+    def __init__(self,anon,soyo):
+        pass
+#由于__slots__相当于属性白名单，所有即使在__init__()的()里写变量的名字也可以，也不用写self.变量=变量，当然写了也没有影响
+
+
+t1=mygo(1,0)
+#这里给anon和soyo的两个数字是因为要初始数值不然会报错，后续会覆盖所有没影响
+t1.anon="soyo桑，love"
+t1.soyo="这个不需要了"
+print(t1.soyo)
+print(t1.anon)
+
+try:
+    t1.tomorin="gugugaga"
+#说明使用了__slots__后不能动态的添加一个属性，即使是在__init__(self)里手动添加也不行，因为__slots__已经规定了这个类只能有两个属性
+#通过 __slots__（固定属性）可以比__dict__（动态字典）更省空间
+except AttributeError as e:
+    print("报错信息：", e)
