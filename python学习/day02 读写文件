@@ -1,37 +1,48 @@
-from sys import argv
-mygo,mujica = argv
-print(f"mujica即将爆炸{mujica}.")
-print("如果不想要mujica爆炸就按Ctrl—C控制喵梦不摘面具。")
-print("如果你确实想让mujica爆炸就按回车建让喵梦摘面具")
-input("你的选择是：")
-print("喵梦正在炸团······")
-band=open(mujica,'w',encoding='utf-8')
-#open()里的'w'是写入的指令（还有'r' 'a' 'r+' 'a+'等登） encoding='utf-8'则是让你能读取中文字符和写入中文字符的代码
-print("墨提斯正在上线，她全都不会弹！")
-band.truncate()
-#truncate（）则是删除你指针开始的数据若用truncate（0）则是删除所有数据
+# 导入必要的模块
+import sys
 
-print("现在选择五名mujica的新队员")
+def main():
+    """主函数：处理用户交互并写入文件"""
+    # 1. 检查命令行参数是否正确
+    if len(sys.argv) != 2:
+        print("❌ 参数错误！正确用法：")
+        print(f"python {sys.argv[0]} <文件保存路径>")
+        print(f"示例：python {sys.argv[0]} B:\\donk.txt")
+        sys.exit(1)  # 退出程序，避免后续报错
 
-player1=input("第一块拼图：")
-player2=input("第二块拼图：")
-player3=input("第三块拼图：")
-player4=input("第四块拼图：")
-player5=input("最后一块拼图：")
+    # 2. 提取并定义清晰的变量（变量名=用途）
+    script_name = sys.argv[0]       # 脚本文件名（monesy.py）
+    save_file_path = sys.argv[1]    # 用户传入的文件保存路径
+    prompt_symbol = ">> "           # 输入提示符号
+    band_name = "mujica"            # 乐队名（语义清晰）
 
-print("银河战舰正在组建中")
-band.write(player1)
-band.write('\n')
-band.write(player2)
-band.write('\n')
-band.write(player3)
-band.write('\n')
-band.write(player4)
-band.write('\n')
-band.write(player5)
-band.write('\n')
+    # 3. 显示提示信息（语义准确，不再混用变量）
+    print(f"\n⚠️ {band_name}即将爆炸！")
+    print("如果不想要爆炸，按 Ctrl+C 取消；如果确认爆炸，按回车键继续。")
+    input(f"{prompt_symbol}你的选择：")  # 等待用户确认
 
-print("银河战舰已组建完毕")
-band.close()
-#在终端里面输入：python monesy.py(你的代码所在文件名) "B:\donk.txt"（你要存放的文本的地址）
-#在终端里不用在路径前加r，因为r是python专属的
+    # 4. 获取用户输入的角色台词
+    print("\n📝 请输入各角色的台词：")
+    lines = {
+        "三角初华": input(f"{prompt_symbol}三角初华："),
+        "八幡海玲": input(f"{prompt_symbol}八幡海玲："),
+        "丰川祥子": input(f"{prompt_symbol}丰川祥子："),
+        "若叶睦": input(f"{prompt_symbol}若叶睦："),
+        "立希": input(f"{prompt_symbol}立希：")
+    }
+
+    # 5. 写入文件（增加异常处理，避免文件操作报错）
+    try:
+        with open(save_file_path, 'w', encoding='utf-8') as file:
+            # 按顺序写入每个角色的台词，每行一个
+            for role, line in lines.items():
+                file.write(f"{line}\n")
+        print(f"\n✅ 成功！内容已写入文件：{save_file_path}")
+        print(f"💥 {band_name} is explode!")
+    except Exception as e:
+        print(f"\n❌ 文件写入失败！错误原因：{e}")
+        sys.exit(1)
+
+# 程序入口
+if __name__ == "__main__":
+    main()
