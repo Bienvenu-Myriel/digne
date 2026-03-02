@@ -4,7 +4,7 @@ B="真的吗？"
 C="真的"
 print(A+B)
 #result=(花花是个天才少年真的吗？)
-print(f"可能是{B}")
+print(f"可能是{C}")
 #result=(可能是真的)
 A="花花是个天才少年{}"
 print(A.format(B))
