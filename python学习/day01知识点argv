@@ -6,6 +6,7 @@ print("我想问几个问题。")
 
 print(f"{saki},我能去你家吗？")
 Doloris=input(falcons)
+#这里的input(falcons)起打断对话的作用，falcons则是问你问题，把falcons=">"起装饰作用
 
 print(f"{saki},你住在哪里？")
 mygo=input(falcons)
@@ -13,7 +14,7 @@ mygo=input(falcons)
 print("sakiko喜欢听什么音乐？")
 music=input(falcons)
 
-print(f"三角初华：你对我的在意程度是{Doloris}。住在{mygo}，你喜欢听{music}")
+print(f"三角初华：你对我的回复是{Doloris}。住在{mygo}，你喜欢听{music}")
 #这个在powershall输入“python 文件名 +变量数-1（知识点补充A）”
 #A:"ave_mujica,saki =argv"中=argv前有几个变量，在powershall里就输入变量数减一。
 #“falcons =">"”这个就是在powershall里你回复时放在前面的“>”，起装饰作用，可以随便换比如“》56大三564d”都行
