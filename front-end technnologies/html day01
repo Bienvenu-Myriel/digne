@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>limbuscompany</title>
+  #这里是标题
+    <link rel="icon" href="gemini.png" type="image/x-icon">
+  #icon的意思是标签页的图标，href则是图标的地址记住要用相对地址不能用绝对地址或电脑盘里的地址，type是属性可加可不加
+</head>
+<body>
+    <img src="RolandFullBody.webp"title="RolandFullBody" alt="404 not found" width="250px">
+  #src是资源的缩写，title的作用是鼠标放在图片上会出现解释框，alt则是图片加载失败出现的文字，width是宽度
+    
+    
+</body>
+</html>
