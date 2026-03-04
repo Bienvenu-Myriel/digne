@@ -4,7 +4,7 @@ import sys
 def main():
     """主函数：处理用户交互并按格式写入文件"""
 
-    # 1. 检查命令行参数
+    # 1. 检查命令行参数len(sys.argv) != 2：sys.argv[0] 是脚本名，就是monesy.py
     if len(sys.argv) != 2:
         print("❌ 参数错误！正确用法：")
         print(f"python {sys.argv[0]} <文件保存路径>")
@@ -16,8 +16,9 @@ def main():
 
     # 定义角色列表，方便后续循环处理
     roles = ["三角初华", "八幡海玲", "丰川祥子", "若叶睦", "立希"]
-
-    # 2. 确认操作
+    #如果想增加乐队成员，只需在第 18 行的 roles 列表中添加名字，后续所有逻辑会自动适应。
+  
+# 2. 确认操作
     print(f"\n⚠️ {band_name} 即将爆炸！")
     print("如果不想要爆炸，按 Ctrl+C 取消；如果确认，按回车键继续。")
     try:
@@ -33,7 +34,7 @@ def main():
         content = input(f"{prompt_symbol}{role}：")
         user_lines[role] = content
 
-    # 4. 写入文件（核心修改点）
+    # 4. 写入文件
     try:
         with open(save_file_path, 'w', encoding='utf-8') as file:
             for role, line in user_lines.items():
