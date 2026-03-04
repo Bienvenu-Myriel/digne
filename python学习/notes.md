@@ -15,8 +15,8 @@ with open(save_file_path, 'w', encoding='utf-8') as file:
 把 'w' 改成 'a'。就从写入模式变成了追加内容模式  
 
 字典（day02 第40行）
-user_lines.items 在变量后加上后缀.items
-写法,循环得到的内容
-for x in user_lines:,"x 是 ""睦"" (只有名字)"
-for x in user_lines.values():,"x 是 ""我也没觉得开心过"" (只有台词)"
-"for k, v in user_lines.items():",k 是名字，v 是台词 (两者都有)
+user_lines.items 在变量后加上后缀.items  
+写法,循环得到的内容  
+for x in user_lines:,"x 是 ""睦"" (只有名字)"  
+for x in user_lines.values():,"x 是 ""我也没觉得开心过"" (只有台词)"  
+"for k, v in user_lines.items():",k 是名字，v 是台词 (两者都有)  
