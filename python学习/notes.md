@@ -5,14 +5,18 @@
 这种方式只将 argv 这一个特定的变量提取到当前的命名空间。
 
 打开本地文件（包含中文）：
-'''with open(save_file_path, 'w', encoding='utf-8') as file:'''   
+with open(save_file_path, 'w', encoding='utf-8') as file:
 #encoding='utf-8'确保中文字符（如角色名字）能正确保存，不会出现乱码,with 语句: 这是一个“上下文管理器”。它的好处是：当缩进内的代码执行完后，Python 会自动关闭文件。即使中途报错，它也能确保文件被正确关闭，防止数据丢失或文件占用。  
 
-'w' 代表 "Write"（写入模式）：  
+1.'w' 代表 "Write"（写入模式）：  
 它的逻辑是：如果文件不存在，就创建一个；如果文件已经存在，它会先清空（Truncate）该文件的所有内容，然后从第一行开始重新写入。  
-'a' 代表 "Append"（追加模式）：  
+2.'a' 代表 "Append"（追加模式）：  
 它的逻辑是：打开文件后，文件指针会直接跳到文件的末尾。你新输入的内容会紧跟在旧内容后面，不会破坏原有的数据。  
 把 'w' 改成 'a'。就从写入模式变成了追加内容模式  
 
 字典（day02 第40行）
-
+user_lines.items 在变量后加上后缀.items
+写法,循环得到的内容
+for x in user_lines:,"x 是 ""睦"" (只有名字)"
+for x in user_lines.values():,"x 是 ""我也没觉得开心过"" (只有台词)"
+"for k, v in user_lines.items():",k 是名字，v 是台词 (两者都有)
