@@ -4,3 +4,5 @@
 2. from sys import argv (导入特定属性)
 这种方式只将 argv 这一个特定的变量提取到当前的命名空间。
 
+打开本地文件（包含中文）：
+with open(save_file_path, 'w', encoding='utf-8') as file: #encoding='utf-8'
