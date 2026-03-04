@@ -38,6 +38,7 @@ def main():
     try:
         with open(save_file_path, 'w', encoding='utf-8') as file:
             for role, line in user_lines.items():
+                #.items() 并不是变量名的一部分，它是 Python 字典（Dictionary）对象自带的一个内置方法（Method）。
                 # 拼接格式：“角色名：内容”
                 formatted_line = f"{role}：{line}\n"
                 file.write(formatted_line)
