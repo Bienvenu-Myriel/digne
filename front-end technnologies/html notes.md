@@ -1,1 +1,3 @@
-<hr>
+'<hr>'是横线
+'h1'是一级标题'h2'就是二级标题
+<link rel="icon" href="favicon.ico" type="image/x-icon">这个是网页标签页的图标，href=""中的网址即是图片地址 type是可选则是否增加的属性
