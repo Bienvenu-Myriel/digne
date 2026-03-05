@@ -20,3 +20,13 @@ user_lines.items 在变量后加上后缀.items
 for x in user_lines:,"x 是 ""睦"" (只有名字)"  
 for x in user_lines.values():,"x 是 ""我也没觉得开心过"" (只有台词)"  
 "for k, v in user_lines.items():",k 是名字，v 是台词 (两者都有)  
+
+语法糖（装饰器语法）：
+@mygo
+def mujica():
+    ...
+    等效于
+def mujica():
+    ...
+
+mujica = mygo(mujica)
