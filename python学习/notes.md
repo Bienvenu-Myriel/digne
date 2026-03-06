@@ -30,3 +30,11 @@ def mujica():
     ...
 
 mujica = mygo(mujica)
+
+类的知识点：
+class mygo：
+    pass
+    
+继承的语法class 子类名(父类名):
+如果子类写了 和父类同名的方法，子类的方法会覆盖父类的方法
+其实 self 不是关键字，只是 Python 的约定（理论上self可以是任何名字，但是最好最好用self）
