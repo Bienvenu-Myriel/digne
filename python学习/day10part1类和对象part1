@@ -12,6 +12,7 @@ class mygo:
         print("我是鼓手椎名立希")
 
 t1=mygo()
+#创建实例对象 对象名 = 类名()
 print(t1.player)
 print(t1.guitar)
 print(t1.Bass)
