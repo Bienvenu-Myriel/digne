@@ -10,3 +10,13 @@ class mygo(str):
 cs=mygo("anon_chihaya")
 print(cs)
 #result：ANON_CHIHAYA
+
+class Moon:
+    def __init__(self):
+        pass
+    def __del__(self):
+        print("我将被删除")
+
+moon = Moon()
+del moon
+#__del__ 就像：对象的“临终遗言”只有在 最后一个引用消失 时才会输出：
