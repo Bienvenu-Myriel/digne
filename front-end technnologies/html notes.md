@@ -8,3 +8,5 @@
  #src是资源的缩写，title的作用是鼠标放在图片上会出现解释框，alt则是图片加载失败出现的文字，width是宽度
 <!-- <h2 style="color: rgb(255, 127, 127);"> -->
 在<h2>的<h2后加上空格然后再加style="",在“”里可以加color改变字体颜色
+ 这是一个<audio src="" controls></audio>
+ <!-- control是必须写的，它是控制器，如果在后面加一个loop（循环播放）muted（静音）autoplay（自动播放） -->
