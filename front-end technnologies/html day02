@@ -25,7 +25,8 @@
         这是跳转其他html的（monesy的）
 
      </div>
-     <a href="liaozong">点我跳转</a>
+     <a href="liaozong.html">点我跳转</a>
+     <!-- 跳转到别的html需要加.html的后缀 -->
 
      <div>
         <audio src="" controls></audio>
