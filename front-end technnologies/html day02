@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>falcons</title>
+    <link rel="icon" href="gemini.png" type="image/x-icon">
+</head>
+<body>
+    <div style="height: 2000px;">
+        <span id="huahua">这里有花花</span>
+        <!-- 在div或者p，span后面加上id=""就可以设置id了，注意id不可以重名,也可以通过style设置样式比如height，background-color可以设置颜色-->
+    </div>
+    <a href="#huahua" target="_blank" name="xiaohui">点击图片或者字体跳转<img src="ArgaliaFullBody.webp" alt=""></a>
+    <!-- _blank是创建并跳转一个新的链接，_self是跳转到新的链接 -->
+    <!-- a+tab获得超链接，在href=""里输入地址就可以直接转到地址，输入zip，就会直接下载，输入#+id则会跳转到id所在处 -->
+
+    <div style="height: 1000px;">
+        <a href="#xiaohui" target="_blank" >这是用name的跳转</a>
+
+    </div>
+    
+    <!-- 锚点可以跳转到别的html的锚点  -->
+    <div style="height: 1000px;background-color:green ;">
+        这是跳转其他html的（monesy的）
+
+     </div>
+     <a href="liaozong">点我跳转</a>
+
+     <div>
+        <audio src="" controls></audio>
+        <!-- control是必须写的，它是控制器，如果在后面加一个loop（循环播放）muted（静音）autoplay（自动播放） -->
+    </div>
+</body>
+</html>
