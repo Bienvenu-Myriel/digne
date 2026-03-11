@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G2</title>
+    <link rel="icon" href="gemini.png" type="image/x-icon">
+</head>
+<body>
+    <div>
+        <video src="" loop muted></video>
+        <!-- video和audio一样都有loop等属性 -->
+    </div>
+    <div>
+        <audio src="" loop muted></audio>
+    </div>
+    <table width="500px" height="300px" border="1px solid black" cellspacing="0" cellpadding="15px">
+        <!-- border是表格的线，1px是线的粗细,cellspacing就是单元格之间的空隙，cellpadding是单元格内元素离单元格左侧的距离  -->
+
+
+        <!-- thead tbody caption tfoot都要在table里才能用 -->
+        <caption>尼尼孩孩major冠军</caption>
+           <!-- caption就是表格标题 -->
+        <thead>
+            <tr>
+                <th>成员</th>
+                <th>排名</th>
+                <th>年龄</th>
+                <th>位置</th>
+                <!-- th是只能在thead里的列 -->
+            </tr>
+            <!-- tr是行 -->
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>monesy</td>
+                <td>top4</td>
+                <td>20</td>
+                <td>awper</td>
+                <!-- thead外的列都是td，包括tfoot -->
+            </tr>
+            <tr>
+                <td>niko</td>
+                <td>top2</td>
+                <td>29</td>
+                <td>自由人</td>
+            </tr>
+            <tr>
+                <td>kyousuke</td>
+                <td>top20+</td>
+                <td>18</td>
+                <td>突破手</td>
+            </tr>
+            <tr>
+                <td>k3</td>
+                <td>top20+</td>
+                <td>30</td>
+                <td>指挥</td>
+            </tr>
+            <tr>
+                <td>testes</td>
+                <td>top20+</td>
+                <td>27</td>
+                <td>辅助手</td>
+            </tr>
+        </tbody>
+        <!-- 小技巧输入td*3加回车可以直接得到三个 -->
+
+        <tfoot></tfoot>
+
+
+        </table>
+
+</body>
+</html>
