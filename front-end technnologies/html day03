@@ -8,12 +8,15 @@
 </head>
 <body>
     <div>
-        <video src="" loop muted></video>
-        <!-- video和audio一样都有loop等属性 -->
+        <video src="" controls loop muted></video>
+        <!-- video和audio一样都有loop等属性，但是千万不要忘记加controls-->
     </div>
     <div>
-        <audio src="" loop muted></audio>
+        <audio src="" controls loop muted></audio>
     </div>
+    <div><iframe width="560" height="315"src="https://www.youtube.com/embed/ujRwf1HdNjk?si=kQncLgJFFl5haR2l"frameborder="0"allowfullscreen></iframe></div>
+    <!-- youtube的视频想要访问的话必须使用iframe然后在分享里找到embed -->
+
     <table width="500px" height="300px" border="1px solid black" cellspacing="0" cellpadding="15px">
         <!-- border是表格的线，1px是线的粗细,cellspacing就是单元格之间的空隙，cellpadding是单元格内元素离单元格左侧的距离  -->
 
