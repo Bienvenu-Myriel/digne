@@ -1,1 +1,30 @@
+class mujica:
+    def __init__(self, name,age):
+        self.name = name
+        self._age = age
+    def __getattribute__(self, attrname):
+        print("我从来没有觉得组乐队开心过")
+    #__getattribute__ 会在 访问任何属性时触发。
 
+        return super().__getattribute__(attrname)
+#因为 __getattribute__ 本身就是“所有属性访问的入口”，如果在里面再用 self.xxx 访问属性，就会再次调用 __getattribute__，从而无限递归。所以必须使用super()函数
+    #让 Python 继续正常查找属性。否则会死循环。
+
+    def __getattr__(self, attrname):
+        if attrname == "sakiko":
+            print("真是高高在上呢！")
+        else:
+            raise AttributeError(attrname)
+
+a=mujica("sakiko",16)
+print(a.name)
+#__getattribute__ = 总入口
+#__getattr__      = 找不到属性的补救方案
+print(a.sakiko)
+#result：
+我从来没有觉得组乐队开心过
+sakiko
+我从来没有觉得组乐队开心过
+真是高高在上呢！
+None
+#__getattr__ 的设计目的是：当属性不存在时，动态生成一个属性。a.sakiko里的sakiko属性不存在，所以getattr给出了none，也可以设置return
