@@ -28,3 +28,21 @@ sakiko
 真是高高在上呢！
 None
 #__getattr__ 的设计目的是：当属性不存在时，动态生成一个属性。a.sakiko里的sakiko属性不存在，所以getattr给出了none，也可以设置return
+
+class falcons:
+    def __setattr__(self, name, value):
+        self.__dict__[name] = value
+        #不能直接写self.name=value会无限递归，类似于getattribute
+    def __delattr__(self, name):
+        del self.__dict__[name]
+
+niko=falcons()
+niko.name="尼尼孩孩major冠军"
+#所以属性其实都在__dict__里面
+print(niko.__dict__)
+del niko.name
+print(niko.__dict__)
+
+#result：
+{'name': '尼尼孩孩major冠军'}
+{}
