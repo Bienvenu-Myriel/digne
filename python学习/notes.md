@@ -3,6 +3,10 @@
 当你使用这种方式时，你将整个 sys 模块引入了当前命名空间。
 2. from sys import argv (导入特定属性)
 这种方式只将 argv 这一个特定的变量提取到当前的命名空间。
+3.跨文件夹导入模块：
+import sys
+sys.path.append("/你/的/完整/路径/文件夹")
+import 你的模块
 
 打开本地文件（包含中文）：
 with open(save_file_path, 'w', encoding='utf-8') as file:
