@@ -8,6 +8,8 @@ import sys
 sys.path.append("/你/的/完整/路径/文件夹")
 import 你的模块
 
+print()里f"真是高高在上{变量名}:.2f"这个:.2f就是两位小数
+
 打开本地文件（包含中文）：
 with open(save_file_path, 'w', encoding='utf-8') as file:
 #encoding='utf-8'确保中文字符（如角色名字）能正确保存，不会出现乱码,with 语句: 这是一个“上下文管理器”。它的好处是：当缩进内的代码执行完后，Python 会自动关闭文件。即使中途报错，它也能确保文件被正确关闭，防止数据丢失或文件占用。  
