@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今晚吃什么</title>
+ <link rel="icon" href="gemini.png" type="image/x-icon">
+</head>
+<body>
+  <form action="https://www.youtube.com/results" method="get" target="_blank">
+    <!-- get和post和python爬虫里一样，在网址的com后面加上/和对应网址？前的内容，youtube是results -->
+     <button>搜索</button>
+     <!-- button就是按钮也可以是input 把type里的类型改成submit或者别的什么，比如password --> 
+     <input type="text" name="search_query">
+
+      <!-- name是用来识别变量名的,网址栏会在？后显示变量名=我们在text里输入的内容（youtube的？后面是search_query） -->
+
+
+      <br>
+
+  </form>
+
+   <form action="" method="post" target="_blank">
+    <!-- 一般密码账号这种都要通过post请求 -->
+    请输入账号：<input type="text" name="usename" >
+   <br>
+    请输入密码：<input type="text" name="password" id="">
+    <br>
+    <input type="submit" value="登录">
+    <!-- input的type里的submit和button的效果一样，但是名字要通过value来更改 -->
+    <br>
+    性别：
+    <label for="male">男</label>
+    <input type="radio" name="sex" id="male" value="male">
+    <label for="female">女</label>
+    <!-- 当我们点击汉字男或者女的时候，通过label可以直接帮我们点击圆点，注意for要和id一致一致 -->
+    
+    <input type="radio" name="sex" id="female" value="female">
+    <br>
+    爱好：
+    <label for="hobby1">动画</label>
+    <input type="checkbox" id="hobby1" name="hobby1" value="cartoon">
+    <!-- name必须写，写了value后台才能看到 -->
+    <label for="hobby2">文学</label>
+    <input type="checkbox" name="hobby2" id="hobby2" value="novels">
+    <label for="hobby3">游戏</label>
+    <input type="checkbox" name="hobby3" id="hobby3" value="game">
+     <label for="hobby4">编程</label>
+    <input type="checkbox" name="hobby4" id="hobby4" value="coding">
+   
+    <br> 
+     <label for="">职业信息</label>
+    <select name="职业" id="">
+      <option value="选择">选择职业</option>
+      <!-- 第一个select下的option会变成select的开始默认选项 -->
+     <option value="student">学生</option>
+     <option value="teacher">老师</option>
+     <option value="headmaster">校长</option>
+     <option value="其他">其他</option>
+
+
+    </select>
+    <br>
+    个人简介：
+    <br>
+    <textarea name="intro" id="" cols="30" rows="20" ></textarea>
+    <!-- 可以通过cols和rows来控制大小  -->
+    <br>
+    <label for="">邮箱</label>
+    <input type="email" name="email" id="">
+    <!-- 这下面都是不同的type，都有独特功能 -->
+    <br>
+    <label for="">电话</label>
+    <input type="tel" name="tel">
+    <br>
+    <label for="">出生日期</label>
+    <input type="date" name="date" id="">
+    <br>
+    <label for="">年龄</label>
+    <input type="number" name="age"  max="120" min="0">
+    <!-- max是设置的最大值，min同理 -->
+    <br>
+
+    <input type="reset" value="重置">
+    <!-- reset就是重置 -->
+    <input type="submit" value="提交">
+
+
+   </form>
+
+</body>
+</html>
