@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人信息收集</title>
+   <link rel="icon" href="gemini.png" type="image/x-icon">
+</head>
+<body>
+  <h1>个人信息收集</h1>
+  <p>请如实填写以下信息，带<span style="color: red;">*</span>为必填项</p>
+  <!-- 嵌入行内元素span来实现设置行内元素样式 -->
+   <form action="#">
+    <fieldset>
+      <!-- fieldset就是一个领域 -->
+      <legend>基本信息（必填）</legend>
+      <div>
+        <label for="name">姓名<span style="color: red;">*</span>：</label>
+        <input type="text" name="name" id="name" required placeholder="请输入您的真实姓名">
+        <!-- required即要求该内容必须填写，如果没写，就会出现placeholder里的内容 -->
+      </div>
+      <br>
+      
+      <div>
+        <label for="">性别<span style="color: red;">*</span>：</label>
+        <input type="radio" name="gender" id="man" value="male" required>
+        <label for="man">男</label>
+        <input type="radio" name="gender" id="" value="female" >
+        <!-- type为radio类型可以只写一个required -->
+        <label for="woman">女</label>
+      </div>
+      <br>
+      <div>
+        <label for="">年龄<span style="color: red;">*</span>：</label>
+        <input type="number" name="age" id="" required min="1" max="120" placeholder="请输入您的年龄">
+      </div>
+      <br>
+      <div>
+        <label for="">手机号码<span style="color: red;">*</span>：</label>
+        <input type="tel" name="tel" id="" placeholder="请输入11位手机号码">
+
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>联系信息（选填）</legend>
+      <div>
+        <label for="">电子邮箱</label>
+        <input type="email" name="email" id="" placeholder="请输入您的邮箱地址">
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>学历与兴趣</legend>
+      <div>
+        <label for="">最高学历<span style="color: red;">*</span>：</label>
+        <select name="education" id="" required>
+          <option value="">请选择学历</option>
+          <option value="primary">小学</option>
+          <option value="junior">中学</option>
+          <option value="university">本科</option>
+          <option value="profession">专科</option>
+          <option value="master">硕士</option>
+          <option value="doctor">博士</option>
+        </select>
+      </div>
+      <br>
+      <div>
+        <label for="">兴趣爱好（多选）：</label>
+        <br>
+        <input type="checkbox" name="hobby1" id="hobby1" value="阅读">
+        <label for="hobby1">阅读</label>
+        <input type="checkbox" name="hobby2" id="hobby2"value="运动">
+        <label for="hobby2">运动</label>
+        <input type="checkbox" name="hobby3" id="hobby3" value="音乐">
+        <label for="hobby3">音乐</label>
+        <input type="checkbox" name="hobby4" id="hobby4" value="旅行">
+        <label for="hobby4">旅行</label>
+        <input type="checkbox" name="hobby5" id="hobby5" value="编程">
+        <label for="hobby5">编程</label>
+
+        
+       
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>其他信息</legend>
+      <div>
+        <label for="">个人简介：</label>
+      </div>
+      <div>
+        <textarea name="intro" id="" cols="80" rows="10" placeholder="请简要介绍自己（选填）"></textarea>
+      </div>
+      <br>
+      <div>
+        <input type="checkbox" name="agree" id="" required>
+        <label for="">我已阅读并同意
+        <a href="">《隐私政策》</a>
+        <span style="color: red;">*</span>
+        </label>
+
+      </div>
+    
+    </fieldset>
+    <input type="submit" value="提交表单">
+    <input type="reset" value="重置表单">
+
+   </form>
+  
+  
+</body>
+</html>
