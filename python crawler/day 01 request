@@ -1,1 +1,24 @@
+import requests
+url="http://www.baidu.com/"
+response = requests.get(url)
+#使用request发送请求
+print(response.text)
+#response.text获取的是字符串
+#response.content获取的是二进制
 
+huahua='世界第一公主殿下'
+result=huahua.encode()
+#将字符串转换为bytes类型（二进制）
+print(result)
+#result：b'\xe4\xb8\x96\xe7\x95\x8c\xe7\xac\xac\xe4\xb8\x80\xe5\x85\xac\xe4\xb8\xbb\xe6\xae\xbf\xe4\xb8\x8b'
+
+misae=b'\xe4\xb8\x96\xe7\x95\x8c\xe7\xac\xac\xe4\xb8\x80\xe5\x85\xac\xe4\xb8\xbb\xe6\xae\xbf\xe4\xb8\x8b'
+results=misae.decode()
+#.decode解码，把二进制转换为字符串
+
+#response的其他属性：
+#response.status_code响应状态码
+#response.request.headers响应对应的请求头
+#response.headers响应头
+#response.request.cookies响应对应的cookie
+#response.cookies响应的cookie（经过了set-cookies动作）
