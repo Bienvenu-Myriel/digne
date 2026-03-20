@@ -22,3 +22,17 @@ results=misae.decode()
 #response.headers响应头
 #response.request.cookies响应对应的cookie
 #response.cookies响应的cookie（经过了set-cookies动作）
+
+import  requests
+url='https://mag.bynez.com/wp-content/uploads/2022/11/Marcel_Proust-Nadar_HD-redimmensionne.jpeg'
+
+response = requests.get(url)
+print(response.content)
+# 图片本质上是二进制数据（binary data），不是文本。图片、音频、视频也是所以用content
+#文本内容（HTML、JSON、字符串）用txt
+with open('marcel.jpg', 'wb') as f:
+#wb是保存二进制，如果要保存文本就去掉b剩下'w'就行了
+    f.write(response.content)
+#这里.jpg前的就是保存下来文件的名字
+print(response.request.headers)
+#打印响应对象的请求头
