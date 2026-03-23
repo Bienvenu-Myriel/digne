@@ -21,5 +21,16 @@ url='https://m704.music.126.net/20260323214626/971e88344669bb2fabc0dca1e2864811/
 res2=requests.get(url)
 # print(res2.content)
 with open('miku.mp3', 'wb') as f:
+#音乐的格式是.mp3
     f.write(res2.content)
 #简简单单的爬音乐，但是如果对方有加密就爬不了了
+
+import requests
+
+url='https://vodkgeyttp8.vod.126.net/cloudmusic/074f/core/2c91/f2b9c8c4a6852d38991ed718bdb4c516.mp4?wsSecret=d403e8d894fa400f007cb4095d238ccb&wsTime=1774272549'
+res2=requests.get(url)
+# print(res2.content)
+with open('music_vedio.mp4', 'wb') as f:
+#视频格式是.mp4
+    f.write(res2.content)
+#简简单单爬个视频
