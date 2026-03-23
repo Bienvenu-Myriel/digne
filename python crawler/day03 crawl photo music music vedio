@@ -1,0 +1,14 @@
+import requests
+
+url='https://p1.music.126.net/3RANMlMM-udSsHyInyVbrQ==/528865105234307.jpg?param=140y140'
+
+headers={
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0'
+}
+#发送请求获取响应
+res = requests.get(url,headers=headers)
+print(res.content)
+#保存图片，wb是二进制，图片视频的本质是二进制
+with open('网易云.jpg','wb') as f:
+    f.write(res.content)
+#简简单单爬个图片
