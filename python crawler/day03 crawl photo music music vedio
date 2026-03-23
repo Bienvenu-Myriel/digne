@@ -12,3 +12,14 @@ print(res.content)
 with open('网易云.jpg','wb') as f:
     f.write(res.content)
 #简简单单爬个图片
+
+
+import requests
+
+url='https://m704.music.126.net/20260323214626/971e88344669bb2fabc0dca1e2864811/jdyyaac/075a/015b/065c/00d7bae26061e8c1c3b916403ed984ff.m4a?vuutv=NsX5yQajijh+2i76+oP4ecmqRbstKclpqbhfftMcm6rNwTZXp+2GXfv0P4GL+Yz0o0sU5EyGZw1ygu+LlE0PVbYKGPzB33XoACuPaBXM87k=&authSecret=0000019d1adb839002cd0aaf6c750006&cdntag=bWFyaz1vc193ZWIscXVhbGl0eV9leGhpZ2g'
+
+res2=requests.get(url)
+# print(res2.content)
+with open('miku.mp3', 'wb') as f:
+    f.write(res2.content)
+#简简单单的爬音乐，但是如果对方有加密就爬不了了
