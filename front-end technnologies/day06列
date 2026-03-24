@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="icon" href="gemini.png" type="image/x-icon">
+</head>
+<body>
+    <ol>
+        <!-- orderlist，有序列表，自动标序号 -->
+        <h1>世界第一上单是谁？</h1>
+        <li>那当然是全球总决赛两连冠选手zues！</li>
+        <li>bin才是真正意义上的世一上！</li>
+        <li>把kiin加进来情况可能会有所变化。</li>
+        <h1>世界第一上单评选</h1>
+        <li>
+            
+            <ol>
+                <!-- ol是可以嵌套的 -->
+                <li>theshy是最受欢迎选手</li>
+                <li>theshy是唯一一个断手上单</li>
+                <li>码头nb</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- ul就是unorder list 无序列表，前面是点-->
+    <ul>
+        <h1>历史最强上单人选</h1>
+        <li>zeus</li>
+        <li>bin</li>
+        <li>theshy</li>
+        <li>duke</li>
+        <ul>
+            <!-- ul也可以嵌套 -->
+            <li>impact</li>
+            <li>letme</li>
+            <li>doran</li>
+        </ul>
+    </ul>
+</body>
+</html>
