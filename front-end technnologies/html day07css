@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeus</title>
+     <link rel="icon" href="gemini.png" type="image/x-icon">
+     <link rel="stylesheet" href="index.css">
+     <!-- 可以通过link来导入index.css的样式，获得一样等同于style的效果 -->
+     <style>
+        /* 这就是css的元素选择器 */
+        div{
+            width:100px;
+            height:100px;
+            background-color: beige;
+
+        }
+     </style>
+</head>
+<body>
+    <!-- 因为在head里有写所以div直接就是head里的样式了 -->
+    <div></div>
+    <div></div>
+    <div style="background-color: red; width: 500px;" ></div>
+    <h1>花花</h1>
+    <!-- 优先级排序：直接在div里写最高，在head里写第二高，通过link导入css文件最低 -->
+   
+</body>
+</html>
+
+下面是index.css里的内容
+h1{
+    color: red;
+}
