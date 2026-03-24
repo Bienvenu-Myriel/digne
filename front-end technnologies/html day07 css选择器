@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeus</title>
+     <link rel="icon" href="gemini.png" type="image/x-icon">
+     <link rel="stylesheet" href="index.css">
+     <!-- 可以通过link来导入index.css的样式，获得一样等同于style的效果 -->
+     <style>
+        /* 这就是css的元素选择器 */
+        div{
+            width:100px;
+            height:100px;
+            background-color: beige;
+
+        }
+     </style>
+</head>
+<body>
+    <!-- 因为在head里有写所以div直接就是head里的样式了 -->
+    <div></div>
+    <div></div>
+    <div style="background-color: red; width: 500px;" ></div>
+    <h1>花花</h1>
+    <!-- 优先级排序：直接在div里写最高，在head里写第二高，通过link导入css文件最低 -->
+   
+</body>
+</html>
+
+下面是index.css里的内容
+h1{
+    color: red;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zeus</title>
+     <link rel="icon" href="gemini.png" type="image/x-icon">
+     <link rel="stylesheet" href="index.css">
+     <!-- 可以通过link来导入index.css的样式，获得一样等同于style的效果 -->
+     <style>
+        /* 元素选择器 */
+        /* 通配选择器 */
+        *{
+            /*   *代表全局的样式，但是这个选择器的优先级最低 */
+            background-color: cornflowerblue;
+        }
+        h1{
+            color: pink;
+            background-color: aqua;
+            /* 样式以;分隔 */
+        }
+
+        p{
+            color: white;
+        }
+        /* 通过class的方式，类选择器的优先级比元素选择器更高 */
+        .box1{
+            /* 类名用.开头 */
+            width:100px;
+            height:100px;
+            background-color: red;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: white;
+        }
+        /* id选择器的id唯一，而class可以有多个 */
+        #item1{
+            width: 200px;
+            height: 300px;
+            background-color: green;
+        /* id选择器的优先级是最高的 */
+        }
+        .box3{
+            color:red;
+        }
+
+     </style>
+</head>
+<body>  
+    <h1>元素选择器</h1>
+    <div class="box1"></div>
+    <div class="box2"></div>
+     <div class="box1"></div>
+     <!-- class的类可以有重复但是id不行 -->
+    <!-- 类选择器 -->
+     <p class="box3"></p>
+     <div class="box1 box3" id="item1">真的是</div>
+     <!-- class可以有多个类名，但是如果前面的类名和类名中有一样的属性，后面类名的属性会覆盖前面的类名属性 -->
+
+     <!-- 其实选择器类似于语法糖 -->
+
+     
+
+
+   
+</body>
+</html>
