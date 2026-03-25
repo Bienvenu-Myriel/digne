@@ -17,8 +17,10 @@ class Tieba:
             f.write(con)
 
     def run(self):
+        #虽然很基础还是提一嘴，send save run都不是关键词
         word = input('请输入贴吧名字：')
         pages = int(input('请输入爬取页数：'))
+        #input得到的是字符串，即使输入的是数字也是字符串，所以需要用int变成数字，但是如果输入的不是数字会报错
 
         for page in range(pages):
             params = {
