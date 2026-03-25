@@ -81,6 +81,16 @@ h1{
         .box3{
             color:red;
         }
+        .faker{
+            color: blueviolet;
+            background-color: rgb(65, 42, 73);
+        }
+        .zeus{
+            color: red;
+        }
+        .gumayusi{
+            color: blue;
+        }
 
      </style>
 </head>
@@ -94,8 +104,12 @@ h1{
      <p class="box3"></p>
      <div class="box1 box3" id="item1">真的是</div>
      <!-- class可以有多个类名，但是如果前面的类名和类名中有一样的属性，后面类名的属性会覆盖前面的类名属性 -->
-
-     <!-- 其实选择器类似于语法糖 -->
+    <div class="faker">
+        <div class="zeus gumayusi">宙活</div>
+        <!-- 如果有两个属性，后面的属性会覆盖前面的属性，gumayusi就覆盖了zeus -->
+        <div class="oner">体育生</div>
+        <!-- 子类只能继承父类的字体属性 -->
+    </div>
 
      
 
