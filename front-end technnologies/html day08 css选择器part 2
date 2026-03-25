@@ -1,1 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zofgk</title>
+    <style>
+        /* 伪类选择器 */
+        #link1:link{
+            /* 超链接未点击的时候 */
+            color: red;
+        }
 
+        #link1:visited{
+            /* 超链接使用后 */
+            color: black;
+        }
+
+        #link1:hover{
+            /* 鼠标移到到超链接时 */
+            color: greenyellow;
+        }
+
+        #link1:active{
+            /* 鼠标点击时触发 */
+            color: blueviolet;
+        }
+
+        img{
+            width: 200px;
+        }
+
+        img:hover{
+            /* hover就是鼠标挪到上面去后会触发，格式就是在后面加上:hover（也可以加在class后面） */
+            width:300px
+        }
+
+
+        /* 子代选择器 */
+        div.faker>div.zeus{
+            /* 父类的class faker下的div calss zeus */
+            color: red;
+            /* 单指一个class的优先级更改高 */
+
+        }
+        div.faker>div{
+            /* 父类 class faker下的所有class */
+            color: blueviolet;
+        }
+        
+        div.faker div{
+            /* 这是后代选择器，所有类faker下的子代，子代的子代等遍历所有div，都会被选中。  >替换为空格 */
+            border:1px solid red;
+        }
+
+        div.faker,div.zeus{
+            /* 这是或选择器，faker和zeus都会被选择，但是faker的子类会自动继承父类的属性（如果子类没有这个属性的话）用于复用 */
+            background-color: green;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="faker">
+        <div class="zeus">zeus</div>
+        <div class="oner">体育生oner</div>
+        <div class="bengi">
+            <div class="bang"></div>
+            <p>gumayusi已经超过bang了</p>
+            <!--<p> 没有自己定义 color，所以继承了父元素的颜色 → 也显示为蓝紫色。<p> 变成紫色 不是子代选择器选中它，而是 父 div 的 color 通过继承传下来了 -->
+        </div>
+        <div class="gumayusi">
+            <div class="keria">keria</div>
+        </div>
+    </div>
+    <div class="zeus">这里是叛忍zeus不是faker的子类所以不会获得属性</div>
+    <a href="http://www.youtube.com" id="link1">youtube</a>
+    <br>
+    <img src="gemini.png" alt="">
+</body>
+</html>
