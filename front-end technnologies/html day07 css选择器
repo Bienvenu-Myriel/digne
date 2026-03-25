@@ -117,3 +117,47 @@ h1{
    
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 交集选择器--必须同时拥有两个元素 */
+        .faker.bengi{
+            color: red;
+        }
+        div.zeus{
+            /* 必须是div的同时有class属性 */
+            color: blue;
+        }
+        /* 并集选择器--只要有一个元素 */
+        .keria,.gumayusi{
+            color:blanchedalmond;
+        }
+        .bang{
+            color: blueviolet;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="faker bengi">交集选择器--必须同时拥有两个元素</div>
+    
+    <div class="zeus">咒活跪下</div>
+
+    <div class="oner gumayusi">三连冠的体育生和他的鸡蛋</div>
+
+    <div class="keria gumayusi">历史第一下路</div>
+
+    <div class="gumayusi bang">但是后面的元素有属性会覆盖前面的属性</div>
+
+
+    
+</body>
+</html>
