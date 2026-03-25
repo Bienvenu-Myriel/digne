@@ -125,9 +125,9 @@ h1{
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>zofgk</title>
     <style>
-        /* 交集选择器--必须同时拥有两个元素 */
+        /* 交集选择器--必须同时拥有两个class */
         .faker.bengi{
             color: red;
         }
