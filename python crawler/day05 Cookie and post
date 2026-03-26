@@ -42,4 +42,43 @@ print(result)
 # 7. 提取并打印提交的参数（核心练习）
 print("\n提取的参数：")
 print("用户名：", result["form"]["username"])
+
+# session---自动处理Cookie
+# session = requests.session() ---实例化session对象
+#response = session.post(url,data=data)
+
+#使用session访问登陆后的页面
+#session.get(url.get)
+
+# cookie池就类似于User-Agent池
+#每一个cookie就是一个账号
+
+#cookie有有效期，但是session没有
+
+#cookie放在自己电脑的浏览器上（不够安全），但是session放在服务器上（更安全）
+#session会占用服务器性能，所有有些情况下用coolie
+
+# 代理ip分为正向代理和反向代理
+# 正向代理是用户给客户端做代理让服务器无法识别到真实ip，被封也无影响。反向代理就是给服务器做代理，以保护服务器。
+
+
+import requests
+url='https://www.baidu.com/s'
+
+headers={
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0'
+}
+
+#构建代理字典
+proxies={
+    #第一种写法
+    'https':'https://12.34.56.78:9527',
+    #第二种
+    'https':'http://172.16.17.32:8080',
+    #如果第一个ip无效的话会自动使用下一个ip
+}
+request=requests.get(url,headers=headers,proxies=proxies)
+
+# 代理 IP = 你授权的 “网络中介”，你把所有流量都交给它，它就能看到、篡改你所有的网络数据。
+# 所以，来路不明的代理 IP，本质上就是把你的网络 “裸奔” 给陌生人看。
 print("密码：", result["form"]["password"])
