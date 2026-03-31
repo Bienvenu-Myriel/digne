@@ -14,6 +14,36 @@
         div.monesy~div{
             background-color: green;
         }
+        /* 属性选择器：选中属性符合要求的元素 */
+        [class="zywoo"]{
+            color: yellow;
+
+        }
+        /* 在所有div中找到class */
+        div[class="vitality"]{
+            color: yellow;
+
+        }
+        
+
+        input[type="text"]{
+            border: 1px solid red
+        }
+        input[type="button"]{
+            height: 20px;
+        }
+
+        div[class*="t1"]{
+            /* *=代表包含这个元素就会被选中 */
+            color: red;
+        }
+          div[class^="lim"]{
+            /* ^=代表这个元素在首位就会被选中 */
+            color: blue;
+        }
+
+
+      
     </style>
 </head>
 <body>
@@ -24,5 +54,24 @@
         <div class="donk">1.42rating</div>
     </div>
 
+    <div class="vitality">team vitality</div>
+    <div class="zywoo"></div>
+
+    <form action="#">
+    <label for="">请输入文本</label>
+    <input type="text" value="">
+    <br>
+    
+    <label for="">邮箱</label>
+    <input type="email" name="" id="">
+    <br>
+    <label for="">确认</label>
+    <input type="button" value="">
+    <br>
+    </form>
+
+    <div class="skt-t1">skt-faker</div>
+    <div class="t1">t1-faker</div>
+    <div class="limbuscompany">但丁</div>
 </body>
 </html>
