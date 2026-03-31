@@ -41,6 +41,21 @@
             /* ^=代表这个元素在首位就会被选中 */
             color: blue;
         }
+        /* 伪元素选择器 */
+        div::first-letter{
+            /* 开头的第一个字被选中，把letter换成line就是第一行被选中*/
+            color: red;
+        }
+        div::selection{
+            /* 被按住鼠标选中的内容会发生的变化 */
+            color: greenyellow;
+        }
+        label::before{
+            /* 在开头加上一段无法被按住鼠标选中的文本*，把before换成after就是在后面加一段 */
+            content: "*";
+            color: red;
+
+        }
 
 
       
@@ -73,5 +88,11 @@
     <div class="skt-t1">skt-faker</div>
     <div class="t1">t1-faker</div>
     <div class="limbuscompany">但丁</div>
+
+    <div class="city">都市最强竞选</div>
+    <div class="boss">首脑</div>
+    <div class="red">殷红迷雾</div>
+    <div class="black">罗兰</div>
+    <label for="">最终结果是：</label>
 </body>
 </html>
