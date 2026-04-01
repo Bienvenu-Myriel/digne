@@ -10,4 +10,12 @@
 在<h2>的<h2后加上空格然后再加style="",在“”里可以加color改变字体颜色
  这是一个<audio src="" controls></audio>
  <!-- control是必须写的，它是控制器，如果在后面加一个loop（循环播放）muted（静音）autoplay（自动播放） -->
- colspan用于跨列，rowspan用于跨行，
+ colspan用于跨列，rowspan用于跨行
+
+快捷方式
+ div.x ，x就是class属性的名字
+ div*5就是乘以5个div
+ div{a}，{}里就是<div>a<div>
+div{$}*9,$会被替换成1，然后递增到9
+div#monesy，就是<div id="monesy"><div>
+input:text,就是<input type="text" name="" id="">
