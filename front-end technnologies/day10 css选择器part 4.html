@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>falcons</title>
+    <link rel="icon" href="gemini.png" type="png">
+    <style>
+        ul>li:first-child{
+            /* 结构伪类选择器,child就是ul下第一个兄弟元素,把first换成last就是最后一名 */
+            background-color: gold;
+        }
+        ul>li:nth-child(4){
+            /*  选中第（）内数字个兄弟元素，把（）中数字换成odd是选中奇数个元素，even则是偶数个 */
+            color: yellow;
+        }
+        ul>li:nth-child(odd){
+            /* 如果把上述的-child后缀改成-of-type它会识别是否是同类型的第二个，因为如果在li前面加一个span，-child还是可能会选中span，用-of-type只会选中li */
+            color: silver;
+        }
+        div.mvp>div:first-of-type{
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>top1-zywoo</li>
+        <li>top2-donk</li>
+        <li>top3-Ropz</li>
+        <li>top4-m0nesy</li>
+        <li>top5-shiro</li>
+        <li>top6-molody</li>
+        <li>top7-flamez</li>
+        <li>top8-kyousuke</li>
+        <li>top9-niko</li>
+        <li>top10-chopper</li>
+        <!-- 快捷输入的方法div{$top}*9 -->
+         
+    </ul>
+    
+    <div class="mvp">
+        <span></span>
+        <div>1mvp</div>
+        <div>2mvp</div>
+        <div>3mvp</div>
+        <div>4mvp</div>
+        <div>5mvp</div>
+        <div>6mvp</div>
+        <div>7mvp</div>
+        <div>8mvp</div>
+    </div>
+    
+</body>
+</html>
