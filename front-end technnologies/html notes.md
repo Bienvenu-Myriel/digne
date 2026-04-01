@@ -19,3 +19,7 @@
 div{$}*9,$会被替换成1，然后递增到9
 div#monesy，就是<div id="monesy"><div>
 input:text,就是<input type="text" name="" id="">
+
+
+选择器优先级：
+行内选择器>id选择器>类选择器>元素选择器>通配选择器（符号）
