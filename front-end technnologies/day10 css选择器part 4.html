@@ -55,3 +55,54 @@
     
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ui伪类选择器 */
+        input[type="checkbox"]:checked{
+            width: 100px;
+            height: 100px;
+            /* :check就是被选中的复选框或者单选按钮 */
+            /* :enabled是可用表单（默认的，几乎没用），disabled表示不可选中属性，focus选中触发 */
+        }
+        input[type="text"]:focus{
+            color: red;
+        }
+        div:target{
+            background-color: red;
+            width: 50px;
+            height: 50px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <input type="checkbox" name="" id="">
+    <input type="text" placeholder="请输入文本">
+    <input type="text" placeholder="格温无法选中" disabled>
+
+    <a href="#monesy1">1</a>
+    <a href="#monesy2">2</a>
+    <a href="#monesy3">3</a>
+    <a href="#monesy4">4</a>
+    <a href="#monesy5">5</a>
+
+    <div id="monesy1"></div>
+    <br>
+    <div id="monesy2"></div>
+    <br>
+    <div id="monesy3"></div>
+    <br>
+    <div id="monesy4"></div>
+    <br>
+    <div id="monesy5"></div>
+    
+    
+</body>
+</html>
