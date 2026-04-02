@@ -26,6 +26,7 @@ add_5 = outer_func(5)
 # 调用内部函数，依然能访问到outer_func中定义的outer_var=5
 result1 = add_5(3)  # 5+3=8
 result2 = add_5(10) # 5+10=15
+#outer_var=5 一直存在，不会丢！
 
 print(result1)  # 输出：8
 print(result2)  # 输出：15
