@@ -10,7 +10,7 @@ Doloris=input(falcons)
 print(f"{saki},你住在哪里？")
 mygo=input(falcons)
 
-print("sakiko喜欢听什么音乐？")
+print(f"{saki}喜欢听什么音乐？")
 music=input(falcons)
 
 print(f"三角初华：你回复了我{Doloris}。住在{mygo}，你喜欢听{music}")
