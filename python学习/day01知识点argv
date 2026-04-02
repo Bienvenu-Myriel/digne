@@ -25,9 +25,9 @@ txt = open(chopper)
 print(f"这是{chopper}：")
 print(txt.read())
 print("宙活跪下！")
-shiro=int("=>")
-txt.again=open(shiro)
-print(txt.again.read())
+shiro=input("=>")
+txt=open(shiro)
+print(txt.read())
 #在powershall里输入：python 代码文件名 文本文件路径
 #结果：python monesy.py "B:\donk.txt"
 #可以得到donk.txt里的内容，但是注意，这个代码只能读取英语，不能读中文（会报错）
