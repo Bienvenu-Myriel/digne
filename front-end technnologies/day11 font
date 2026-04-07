@@ -29,6 +29,19 @@
             src: url();
             /* url不用多说了吧 */
         }
+        
+        .loyalty{
+            text-align: center;
+            /* align就是调整位置，center是正中间，left是默认right就是靠右 */
+            text-shadow: 1px 1px rgba(230, 210, 110, 0.548);
+            /* text-shadow: 水平 垂直 模糊 颜色;前两个必须写，后两个可选。 */
+            
+        }
+        div.angela{
+            text-align: center;
+            /* 给图片的父容器（比如 <div>）加 text-align: center，让容器内的行内内容（包括图片）居中： */
+            
+        }
     </style>
 
 </head>
@@ -42,6 +55,11 @@
         <li><span class="lighter">top5:Bernard Law Montgomery</span></li>
         <li><span class="li000 lighter">仅评价以上几位</span></li>
     </ul>
+
+    <div>
+        <div class="loyalty">实际上历史上最杰出的军事家其实是将军</div>
+        <div class="angela"><img src="AngelaFullBody.webp" alt=""></div>
+    </div>
     
     
 </body>
