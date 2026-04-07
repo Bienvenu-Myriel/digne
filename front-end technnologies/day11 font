@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史上最杰出的军事家</title>
+    <link rel="icon" href="gemini.png" type="image/png">
+    <style>
+       
+        span.li01{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            /* weight表示加粗，400是normal（加粗），700=bold（更粗），100-400=lighter（变细） */
+        }
+        
+        span.li000{
+            font-size: 16px;
+            /* font是设置字体的关键词，里面还有family（字体）、style */
+            font-style: italic;
+            /* italic是倾斜 */
+            font-family:"华文琥珀";
+        }
+        .lighter{
+            font-weight: lighter;
+        }
+        @font-face {
+            font-family:"花花字体" ; 
+             /* 自己取个名字 */
+            src: url();
+            /* url不用多说了吧 */
+        }
+    </style>
+
+</head>
+<body>
+    <h1>人类历史上最杰出的军事家</h1>
+    <ul>
+        <li><span class="li01">top1:Napoleon Bonaparte</span></li>
+        <li><span>top2:Arthur Wellesley Wellington</span></li>
+        <li><span>top3:Erich von Manstein</span></li>
+        <li><span class="lighter">top4:Heinz Wilhelm Guderian</span></li>
+        <li><span class="lighter">top5:Bernard Law Montgomery</span></li>
+        <li><span class="li000 lighter">仅评价以上几位</span></li>
+    </ul>
+    
+    
+</body>
+</html>
