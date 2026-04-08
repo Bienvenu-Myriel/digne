@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字字体案例练习</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <br><br><br>
+    <div class="captain">
+        <div class="top1">
+            <h1 class="title1">CSS 字体样式综合演示</h1>
+            <br>
+            <h2 class="title2">Font style Comprehensive Demo</h2>
+        </div>
+   
 
+        <div class="content">
+            <p class="part1">这是一段<span class="part0">正文字体演示</span>，包含了字体、字号、行高、首行缩进、字间距等样式。
+            在前端开发中。<span class="blue">良好的文字排版</span>能大幅提升页面的可读性与美观度。</p>
+            <br>
+            <p class="part2">
+            我们可以为文字添加<span class="under">下划线</span>、<span class="delete">删除线</span>
+            也可以修改文字颜色、粗细、斜体等效果。学习前端请访问：<a href="" class="monesy">前端学习平台</a>
+            </p>
+            <br>
+            <p class="part3">文字是页面的灵魂，样式是文字的外衣</p>
+        </div>
+
+        <div class="last">
+            <p class="last1">掌握CSS字体样式是前端基础中的基础，包括<span class="last2">font-family、font-size、font-weight、font-style、line-height、
+                text-align、text-indent、text-decoration、text-shadow </span>等属性。</p>
+        </div>
+    </div>
+    
+</body>
+</html
+
+
+  .css：
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+div.captain{
+    width: 800px;
+    border: 1px solid red;
+    margin: auto;
+    /* margin控制div这个盒子，auto就是水平居中 */
+}
+
+.top1{
+    text-align: center;
+}
+
+.title1{
+    font-family: "华文行楷";
+    font-size: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+.title2{
+    font-family: "楷体";
+    font-size: 25px;
+    color: gray;
+    font-style: italic;
+    font-weight: 200;
+}
+div.captain *{
+    text-indent: 2em;
+    line-height: 2;
+}
+
+.part0{
+    color: red;
+    font-weight: bold;
+}
+.blue{
+    color: blue;
+    font-style: italic;
+}
+.under{
+    text-decoration: 1px solid underline red;
+}
+.delete{
+    text-decoration: 1px solid line-through red;
+}
+p.part3{
+    text-align: right;
+    font-family: "华文行楷";
+    color: gray;
+    font-style: italic;
+    font-size: 20px;
+
+}
+.last2{
+    color: red;
+    font-weight: bold;
+}
+  
