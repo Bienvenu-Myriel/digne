@@ -29,11 +29,11 @@ SHOW TABLES;
 CREATE TABLE NAME (
   ID INT [COMMENT '注释内容'],
   NAME VARCHAR(20) [COMMENT '注释内容'],
-  GENDER VARCHAR(2) [COMMENT '']
+  GENDER CHAR(1) [COMMENT '性别不是男就是女，所有直接用char']
   );[COMMENT '']
 
   千万记得：1.COMMENT + 空格 + 单引号 + 注释内容 + 单引号 COMMENT后面必须跟一个空格
-         2.变量A 后面跟输入类型，在mysql里字符串的输入类型是VARCHAR() （）内的数字就是最大字符串长度。
+         2.变量A 后面跟输入类型，VARCHAR() （）内的数字就是最大字符串长度。
          3.千万记得要在末尾加逗号
          4.在mysql里只要你没输入;就不会执行，所有可以输入一部分先回车再输入后面部分用;来结尾，但是注意已经回车的内容不支持修改只能ctrl+c停止了
          5.最后一个字段的末尾，绝对不能加逗号,加了逗号默认还有内容所以系统会报错
