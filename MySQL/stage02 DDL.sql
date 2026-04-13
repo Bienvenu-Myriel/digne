@@ -13,4 +13,4 @@ NEW_NAME3和VARCHAR(10)都会覆盖之前的数据。
 
 删除表单（table）的方法：DROP TABLE [IF EXISTS] SPIRIT;  --drop就是删除呗没啥好说的,SPIRIT就是表单的名字（TABLE）
 
-删除表单（table）的数据但是留下空表单的方法：TRUNCATE TABLE SPIRIT;
+删除表单（table）的数据但是留下空表单和field字段的方法：TRUNCATE TABLE SPIRIT;  --这个方法只会清空表中的数据行，不会删除表结构也就是 field / 字段
