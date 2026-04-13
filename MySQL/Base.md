@@ -10,4 +10,4 @@
 
 MySQL 自带的 4 个系统库，绝对不能删，一删就完蛋
 
-流程1：1.先打开mysql,2.用show databases;查看已有表单，3.USE NAME; 4.SHOW TABLES;查看表单5.DESC NAME;查看内容。
+流程1：1.先打开mysql,2.用show databases;查看已有数据库，3.USE NAME;使用数据库 4.SHOW TABLES;查看表单5.DESC NAME;查看对应表单内容。
