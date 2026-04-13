@@ -11,3 +11,6 @@ NEW_NAME3和VARCHAR(10)都会覆盖之前的数据。
 
 重命名表单（table）的方法：ALTER TABLE HUAHUA RENAME TO MUJICA; --把表单（TABLE）huahua改名成mujica。
 
+删除表单（table）的方法：DROP TABLE [IF EXISTS] SPIRIT;  --drop就是删除呗没啥好说的,SPIRIT就是表单的名字（TABLE）
+
+删除表单（table）的数据但是留下空表单的方法：TRUNCATE TABLE SPIRIT;
