@@ -11,7 +11,7 @@
       height: 500px;
      background-color: rgba(211, 2, 2, 0.5);
      /* 背景颜色 */
-     background-image: url("gemini.png");
+     background-image: url("https://photo.16pic.com/00/53/26/16pic_5326745_b.jpg");
      /* 背景图片的设置 */
      background-size: 100px 100px;
      /* 这是给背景图片的高度和宽度设置，如果图片没有充满背景区域，就会重复显示，直到充满为止。 */
@@ -54,6 +54,29 @@
      /* 背景图片的位置设置，默认是左上角，也就是0px 0px，第一项是水平位置，第二项是垂直位置，可以使用像素值或者百分比值来指定位置。 */
      /* 不只是可以用数字表示也可以用关键词来表示位置，比如left、center、right、top、center、bottom等。 */
     }
+    .top5{
+      width: 500px;
+      height: 500px;
+      background-color: white;
+     background-image: url("gemini.png");
+     background-size: cover;
+     font:bold 100px/1.5 "微软雅黑";
+     text-align: center;
+     background-clip: text;
+      /* 这个属性是用来设置背景图片是否被裁剪掉的，如果设置为text，那么背景图片就会被裁剪掉，只显示在文本的范围内。 */
+      color: transparent;
+      /* 这个属性是用来设置文本的颜色的，如果设置为transparent，那么文本就会变成透明的，这样就可以让背景图片显示出来了。 */
+    }
+
+    body{
+      width: 100%;
+      height: 100wh;
+      /* 设置视口的宽度和高度为100%，%单位也可以是wh（是一样的），以确保背景图片能够覆盖整个页面。 */
+      background-image: url("https://photo.16pic.com/00/53/26/16pic_5326745_b.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      /* 但是这种用法有各种各样的问题，还是用position来设置背景图片的位置比较好。 */
+    }
 
   </style>
 </head>
@@ -71,5 +94,9 @@
   <br>
 
   <div class="top4"></div>
+
+  <br>
+
+  <div class="top5">这是网上随便找的一张图</div>
 </body>
 </html>
