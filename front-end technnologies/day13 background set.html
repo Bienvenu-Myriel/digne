@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background set</title>
+  <link rel="icon" href="gemini.png" type="image/png">
+  <style>
+    .top1{
+      width: 500px;
+      height: 500px;
+     background-color: rgba(211, 2, 2, 0.5);
+     /* 背景颜色 */
+     background-image: url("gemini.png");
+     /* 背景图片的设置 */
+     background-size: 100px 100px;
+     /* 这是给背景图片的高度和宽度设置，如果图片没有充满背景区域，就会重复显示，直到充满为止。 */
+     border:10px solid rgba(0, 0, 0, 0.5);
+    }
+    .top2{
+      width: 500px;
+      height: 500px;
+     background-color: rgba(211, 2, 2, 0.5);
+     background-image: url("gemini.png");
+     background-size: 100px 100px;
+     background-repeat: no-repeat;
+     /* 手动设置如果未充满背景不会重复 */
+     border:10px solid rgba(0, 0, 0, 0.5);
+    }
+    .top3{
+      width: 500px;
+      height: 700px;
+     background-color: rgba(211, 2, 2, 0.5);
+     background-image: url("gemini.png");
+     background-size: 100px 100px;
+     background-repeat: no-repeat;
+     background-size: contain;
+     /* 强行用图片按等比例的缩放来填充背景区域，如果图片的宽高比与背景区域的宽高比不同，那么图片会被缩放到适应背景区域的宽度或高度，可能会有空白区域。 */
+     border:10px solid rgba(0, 0, 0, 0.5);
+    }
+    .top4{
+      width: 500px;
+      height: 700px;
+     background-color: rgba(211, 2, 2, 0.5);
+     background-image: url("gemini.png");
+     background-size: 100px 100px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     /* 图片可能会被裁剪掉一部分，以保证图片充满背景区域，并且保持图片的宽高比不变。 */
+     /* 强行用图片按等比例的缩放来充满背景区域，如果图片的宽高比与背景区域的宽高比不同，那么图片会被缩放到适应背景区域的宽度或高度，可能会有部分图片被裁剪掉。 */
+     border:10px solid rgba(0, 0, 0, 0.5);
 
+     background-position: 0px 50px;
+     /* 背景图片的位置设置，默认是左上角，也就是0px 0px，第一项是水平位置，第二项是垂直位置，可以使用像素值或者百分比值来指定位置。 */
+     /* 不只是可以用数字表示也可以用关键词来表示位置，比如left、center、right、top、center、bottom等。 */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="top1"></div>
+
+  <br>
+
+  <div class="top2"></div>
+  
+  <br>
+
+  <div class="top3"></div>
+
+  <br>
+
+  <div class="top4"></div>
+</body>
+</html>
