@@ -1,0 +1,72 @@
+block（块级元素）
+特点：
+独占一行
+可以设置宽、高、内外边距
+宽度默认铺满父容器
+
+ inline（行内元素）
+特点：
+和其他元素并排显示
+不能设置宽高
+宽高由内容决定
+上下内外边距不生效
+
+ inline-block（行内块元素）
+结合了 block 和 inline 的优点：
+可以并排显示（像 inline）
+可以设置宽高、内外边距（像 block）
+最常用！做导航、按钮、图标必用！
+
+flex（弹性布局）
+现代布局之王！
+用来轻松排列子元素：水平、垂直、居中、均分…
+
+none（隐藏元素）
+特点：
+元素彻底消失
+不占空间
+不在页面流里
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>device</title>
+  <link rel="png" href="gemini.png" type="image/png">
+  <style>
+    a{border: 1px solid #000;
+      width: 100px;height: 100px;
+    }
+    a.top1{display: inline;
+      width: 100px;height: 100px;
+    /* 就是默认的行内元素，宽高设置无效，内容撑开宽高 */}
+
+    a.top2{display: block;
+      width: 100px;height: 100px;
+    /* 就是块级元素，宽高设置有效，独占一行 */}
+
+    .padding{
+     padding: 100px 50px 40px 20px;
+     /* 表示元素内容与边框之间的距离为100px 上100px 右50px 下40px 左20px */
+     /*也可以用padding+方向来设置单边的padding值，如padding-top:100px; 除top外还有right bottom left */
+      background-color: red;
+      
+      border: 10px solid #000;
+      width: 100px;height: 100px;
+      padding-left: 50px;
+      /* 可以有多个padding值，后面的会覆盖前面的值，如padding-left:50px;会覆盖掉padding:100px 50px 40px 20px;中的padding-left:20px; */
+      /* border包裹着padding，padding包裹着content，content就是元素的内容区域，border是元素的边框，padding是元素内容与边框之间的距离 */
+    }
+
+  </style>
+</head>
+<body>
+  <a href=""  class="top1">top1:donk</a>
+  <a href="" class="top2">top2:monesy</a>
+  <br>
+
+  <div class="padding">尼尼孩孩major冠军</div>
+
+  
+</body>
+</html>
