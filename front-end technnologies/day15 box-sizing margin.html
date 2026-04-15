@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boxsizing</title>
+  <link rel="icon" type="image/x-icon" href="gemini.png">
+  <style>
+    *{
+      margin: 0;
+      /* body是有margin的，默认是8px，所以要把它设置为0。 */
+      padding: 0;
+      box-sizing: border-box;
+      /* 表示元素的宽度和高度包括内容、内边距和边框，但不包括外边距。 */
+    }
+
+    .top1{
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      border: 10px solid black;
+      background-color: yellow;
+      margin-bottom: 50px;
+      /* 移动的是top2而不是top1，因为top1的外边距和top2的外边距重叠了，所以只移动了top2。 */
+    }
+    .top2{
+      width: 200px;
+      height: 200px;
+      padding: 10px;
+      border: 10px solid black;
+      margin-left: 50px;
+      margin:20px 15px 40px 50px;
+      /* margin控制方向和padding一样，都是上右下左。 */
+      background-color: blue; 
+    }
+    .top2_5{
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      border: 10px solid black;
+      margin-left: 50px;
+      margin:20px 15px 40px 50px;
+      background-color: red; 
+    }
+  </style>
+</head>
+<body>
+  <div class="top1"></div>
+  <div class="top2">
+    <div class="top2_5"></div>
+  </div>
+</body>
+</html>
