@@ -30,19 +30,20 @@
       width: 200px;
       height: 200px;
       padding: 10px;
-      border: 10px solid black;
+      /* border: 10px solid black; */
+      /* 给父元素用border可以解决margin塌陷的问题，因为border会阻止外边距的重叠。（也可以用padding） */
+      overflow: hidden;
+      /* 用overflow: hidden;也可以解决margin塌陷的问题，因为overflow: hidden;会创建一个新的块格式化上下文，阻止外边距的重叠。 */
       margin-left: 50px;
-      margin:20px 15px 40px 50px;
+      margin:60px;
       /* margin控制方向和padding一样，都是上右下左。 */
       background-color: blue; 
     }
     .top2_5{
       width: 50px;
       height: 50px;
-      padding: 10px;
-      border: 10px solid black;
-      margin-left: 50px;
-      margin:20px 15px 40px 50px;
+      margin:50px;
+      /* margin塌陷了，因为top2_5的外边距和top2的外边距重叠了，所以只移动了top2_5。 */
       background-color: red; 
     }
     span{
