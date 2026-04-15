@@ -20,6 +20,9 @@
       padding: 10px;
       border: 10px solid black;
       background-color: yellow;
+      margin-top: -50px;
+      /* margin可以是负值，表示元素向相反的方向移动。这里的margin-top: -50px;表示元素向上移动50px。因为top1和top2的外边距重叠了，所以只移动了top2。 */
+      /* 但是一般不用margin，用定位来移动元素，因为margin会影响元素的布局，而定位不会。 */
       margin-bottom: 50px;
       /* 移动的是top2而不是top1，因为top1的外边距和top2的外边距重叠了，所以只移动了top2。 */
     }
