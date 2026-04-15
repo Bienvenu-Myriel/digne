@@ -45,6 +45,21 @@
       margin:20px 15px 40px 50px;
       background-color: red; 
     }
+    span{
+      margin: 10px;
+      /* 注意行内元素的margin只会影响左右，不会影响上下，因为行内元素的高度是由字体大小决定的，而不是由margin决定的。 */
+      border: 10px solid black;
+    }
+
+    .top3{
+      width: 200px;
+      height: 200px;
+      border: 10px solid black;
+      margin-left: 50px;
+      margin:10px auto ;
+      /* margin的值为auto时，表示元素水平居中。因为元素的宽度是200px，所以左右的外边距会自动分配，使元素居中。 */
+      background-color: green; 
+    }
   </style>
 </head>
 <body>
@@ -52,5 +67,10 @@
   <div class="top2">
     <div class="top2_5"></div>
   </div>
+
+  <span>尼尼孩孩major冠军</span>
+  <span>尼你害孩没这冠军</span>
+
+  <div class="top3"></div>
 </body>
 </html>
