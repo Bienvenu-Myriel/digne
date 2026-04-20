@@ -13,4 +13,4 @@ MySQL 自带的 4 个系统库，绝对不能删，一删就完蛋
 流程1：1.先打开mysql,2.用show databases;查看已有数据库，3.USE NAME;使用数据库 4.SHOW TABLES;查看表单5.DESC NAME;查看对应表单内容。
 
 
-在Datagrio里右键打开数据库，选择table右键，鼠标对准新建，在里面选中查询控制台，在里面输入指令。
+在Datagrip里右键打开数据库，选择table右键，鼠标对准新建，在里面选中查询控制台，在里面输入指令。
