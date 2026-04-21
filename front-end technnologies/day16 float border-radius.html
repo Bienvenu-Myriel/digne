@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        div.content img{
+            width:500px;
+            float:left;
+            /* float的作用是让元素浮动，让图片与文本环绕，float的值为left时，元素会向左浮动，并且文本会环绕在元素的右侧。 */
+            margin: 10px;
+            border-radius: 8px;
+            /* 作用是给图片添加圆角效果，border-radius的值为8px时，图片的四个角会变得圆润，半径为8像素。 */
+        }
+        h1{
+            text-align: center;
+        }
+        p{
+            text-indent: 2em;
+            font:20px "华文行楷";
+            line-height: 30px;
+        }
+        div.content{
+            background-color: #01010123;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>m0nesy人物介绍：</h1>
+    <div class="content">
+        <img src="m0nesy.jpg" alt="">
+        <p>伊利亚·奥西波夫，游戏ID：m0NESY，2005年5月1日出生于俄罗斯奥列霍沃·祖沃，俄罗斯电子竞技选手，曾效力于NaVi战队、G2战队，现效力于Team Falcons战队。 [1-2] [54]
+m0NESY自幼接触《CS》，2020年加入NaVi青训队，2022年转会G2战队，同年取得BLAST Premier全球总决赛冠军； [9]在2023年取得IEM卡托维兹站冠军、IEM科隆站冠军等； [10] [15]在2024年取得IEM达拉斯站冠军、电竞世界杯CSGO项目亚军、BLAST秋季赛冠军、BLAST世界总决赛冠军等； [23-24] [26-27]在2025年4月转会加入Falcons战队，同年取得IEM墨尔本站亚军、2025电竞世界杯CSGO项目季军、EPL S22亚军、IEM成都站季军等； [32] [37] [39-40]在2026年取得BLAST冬季赏金赛亚军。</p>
+         <img src="monesy2.webp" alt="">
+        <p>Ilya "m0NESY" Osipov (born May 1, 2005) is a Russian professional Counter-Strike 2 player who plays for Team Falcons as the AWPer and a former Counter-Strike: Global Offensive player.
+
+m0NESY was named Rookie of the Year in 2022, his professional debut, by HLTV and placed seventh in their annual player rankings. [1][2] He was later ranked the fourth best player of 2023 and the second best of 2024. [3][4] He is known for his explosive AWPing and swift flick shots.</p>
+       
+</div>
+<!-- 这是典型的float布局问题，图片和文本之间没有明确的分隔，导致文本环绕在图片周围。可以通过添加一个清除浮动的元素来解决这个问题，例如在图片和文本之间添加一个div，并设置其样式为clear: both;，这样就可以让文本在图片下方显示，而不是环绕在图片周围。 -->
+    
+</body>
+</html>
