@@ -43,3 +43,83 @@ m0NESY was named Rookie of the Year in 2022, his professional debut, by HLTV and
     
 </body>
 </html>
+
+float容易发生的问题：
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="icon" type="image/x-icon" href="gemini.png">
+    <style>
+    span{width: 100px;height: 100px;border:1px solid red;margin: 20px;}
+    span.s1mple{float: left;}
+    /* 说明任何元素设置了float属性后，就会脱离文档流，向左或向右浮动，直到碰到包含块边界或另一个浮动元素为止。其他元素会围绕着浮动元素进行排列。 */
+    /* 设置了float属性的元素会被视为块级元素，即使它们原本是行内元素。这意味着它们会占据整行的宽度，并且可以设置宽度和高度。 */
+    div{width: 100px;height: 100px;border:1px solid red;}
+    .zywoo{float: right;}
+    .m0nesy{float: left;}
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <span class="s1mple">Hello, World!</span>
+    <span class="zywoo">Zywoo</span>
+    <div class="m0nesy">反恐精英之神</div>
+    <div class="donk">小驴大人</div>
+    <!-- 这里由于未给div设置浮动属性，出现了文本流和文档流的混乱，导致布局不如预期。文本流中的文本会被div元素覆盖，而文档流中的div元素会被文本流中的文本覆盖，造成布局混乱。 -->
+    <div class="zywoo">法国大裂谷</div>
+    <!-- 文本流可以设置margin、padding和border等属性来调整元素之间的间距和边界。文档流中的元素会按照正常的文档流规则进行排列，而文本流中的元素会根据浮动属性进行排列。文本流中的元素会被视为行内元素，而文档流中的元素会被视为块级元素。文本流中的元素会被其他元素覆盖，而文档流中的元素会被其他元素覆盖。文本流中的元素会被包含块边界遮挡，而文档流中的元素不会被包含块边界遮挡。 -->
+    <!-- 若未设置浮动属性，浮动元素可能会被其他元素覆盖或被包含块边界遮挡，导致布局混乱。设置浮动属性可以确保元素按照预期的方式排列和显示。 -->
+
+
+    
+
+</body>
+</html>
+
+处理float的问题方法：
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <link rel="icon" type="image/x-icon" href="gemini.png">
+    <style>
+
+    .cs2{border:1px solid black;}
+    /* 注意父类没设置高度，子类设置了float属性，父类就无法计算高度了，所以父类的高度为0了。但是通过给父类设置一个伪元素来清除浮动，就可以让父类正确计算高度了。 */
+    /* 给浮动元素的父元素加这个 */
+    .cs2::after {
+        content: "";       /* 必须写 */
+        display: block;    /* 转块级 */
+        clear: both;       /* 清除左右浮动 */
+        /* clear: both 清除浮动这个功能，只能写在子元素上才有用！ */
+    }
+    .cs2 div{width: 100px;height: 100px;border:1px solid red;float: left;margin: 20px;}
+    
+
+    </style>
+
+
+</head>
+<body>
+
+    
+    <div class="cs2">
+        <div class="top1">1</div>
+        <div class="top2">2</div>
+        <div class="top3">3</div>
+        <!-- 如果把父元素中的子元素设置为float属性，那么父元素就会失去对这些子元素的高度计算，导致父元素的高度为0。这是因为浮动元素会脱离文档流，不占据空间，因此父元素无法计算出它们的高度。为了避免这种情况，可以使用清除浮动（clear）属性或者使用伪元素来清除浮动，从而让父元素能够正确计算高度。 -->
+    </div>
+</body>
+</html>
