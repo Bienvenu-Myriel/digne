@@ -18,3 +18,20 @@ INSERT INTO 表名VALUES(值1,值2,...),(值1,值2,...),(值1,值2,...);
 
 
 SELECT * FROM MUJICA   --从 MUJICA 这张表中，查询所有列、所有行的数据
+
+DML修改和更新数据：
+  
+UPDATE 表名 SET 字段名1=值1 字段名2=值2,...[WHERE 条件];
+
+实践1：UPDATE MUJICA SET NAME='LIAO' WHERE NAME='牢钟';
+实践2：UPDATE MUJICA SET ID=3 WHERE NAME='LIAO';
+实践3：UPDATE MUJICA SET GENDER='福瑞' WHERE ID='3';
+注意这里的ID GENDER ID 都是在创建表格时给的属性，如果没有where 条件的话表内所有数据都会改变
+
+删除数据：
+
+DELETE FROM 表名 [WHERE 条件];
+
+实践1：DELETE FROM MUJICA WHERE NAME='LIAO';
+实践2：DELETE FROM MUJICA;   --这里不加where等效于之前学的 TRUNCATE
+
