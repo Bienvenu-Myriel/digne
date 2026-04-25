@@ -33,5 +33,7 @@ UPDATE 表名 SET 字段名1=值1 字段名2=值2,...[WHERE 条件];
 DELETE FROM 表名 [WHERE 条件];
 
 实践1：DELETE FROM MUJICA WHERE NAME='LIAO';
-实践2：DELETE FROM MUJICA;   --这里不加where等效于之前学的 TRUNCATE
+实践2：DELETE FROM MUJICA;   --这里不加where等效于之前学的 TRUNCATE TABLE 表名;
+
+
 
