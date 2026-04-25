@@ -1,7 +1,7 @@
 -- DML添加数据：
 -- 1.给指定字段添加数据：
 INSERT INTO 表名(字段1,字段2,...) VALUES(值1,值2,...);
-实践：INSERT INTO MUJICA(ID, NAME, AGE, GENDER, NEW_NAME3)  VALUES(01,'花花',18,'男','花仙子'); -- 这是全部字段都添加数据
+#实践：INSERT INTO MUJICA(ID, NAME, AGE, GENDER, NEW_NAME3)  VALUES(01,'花花',18,'男','花仙子'); -- 这是全部字段都添加数据
 INSERT INTO MUJICA(ID, NAME, AGE, GENDER)  VALUES(01,'花花',18,'男'); -- 这是选择一部分字段添加数据
 
 
