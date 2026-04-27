@@ -32,8 +32,8 @@ SELECT * FROM MUJICA WHERE NEW_NAME3 IS NOT NULL;  -- 不用多说了吧？
 #例4：
 SELECT * FROM MUJICA WHERE AGE IN (20,35,28);  -- 查询()内有的字段
 #例5：
-SELECT * FROM MUJICA WHERE NAME LIKE '___';  -- ''里一共三个下划线，一个_对应一个字符
-
+SELECT * FROM MUJICA WHERE NAME LIKE '___';  -- ''里一共三个下划线，一个_对应一个字符,'_花'，第一个随意字符，但第二个必须是花
+SELECT * FROM MUJICA WHERE NAME LIKE '花%';  -- %表示任意字符数，但是“花”必须在首位，'%花'就是花必须在末尾，'%花%'就是所有包含花的字段
 
 
 
