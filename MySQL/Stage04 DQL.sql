@@ -21,6 +21,15 @@ SELECT DISTINCT 字段列表 FROM 表名;
 SELECT DISTINCT NAME  '名字' FROM MUJICA; -- 可以和设置别名组合
 
 -- 条件查询就是在上面的基础上在末尾加上WHERE 条件 符号（=或者>= <=,详细请见Stage04 DQL+.md）
+#例1：
+SELECT * FROM MUJICA WHERE age > 20;
+#例2:
+SELECT * FROM MUJICA WHERE age BETWEEN 20 AND 40; -- 查询age位于20到40的字段
+SELECT * FROM MUJICA WHERE age >= 20 && age <= 40; -- 和BETWEEN ... AND ... 是等效的，把&&替换成and效果一样。
+#例3：
+SELECT * FROM MUJICA WHERE NEW_NAME3 IS NULL;  -- 查询NEW_NAME3为null的字段
+SELECT * FROM MUJICA WHERE NEW_NAME3 IS NOT NULL;  -- 不用多说了吧？
+
 
 
 
