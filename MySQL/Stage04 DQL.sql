@@ -29,6 +29,11 @@ SELECT * FROM MUJICA WHERE age >= 20 && age <= 40; -- 和BETWEEN ... AND ... 是
 #例3：
 SELECT * FROM MUJICA WHERE NEW_NAME3 IS NULL;  -- 查询NEW_NAME3为null的字段
 SELECT * FROM MUJICA WHERE NEW_NAME3 IS NOT NULL;  -- 不用多说了吧？
+#例4：
+SELECT * FROM MUJICA WHERE AGE IN (20,35,28);  -- 查询()内有的字段
+#例5：
+SELECT * FROM MUJICA WHERE NAME LIKE '___';  -- ''里一共三个下划线，一个_对应一个字符
+
 
 
 
