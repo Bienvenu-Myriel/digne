@@ -20,7 +20,7 @@ SELECT DISTINCT 字段列表 FROM 表名;
 #例：
 SELECT DISTINCT NAME  '名字' FROM MUJICA; -- 可以和设置别名组合
 
-条件查询就是在上面的基础上在末尾加上WHERE 条件 符号（=或者>= <=,详细请见Stage04 DQL+.sql）
+-- 条件查询就是在上面的基础上在末尾加上WHERE 条件 符号（=或者>= <=,详细请见Stage04 DQL+.md）
 
 
 
