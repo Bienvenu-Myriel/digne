@@ -35,6 +35,21 @@ SELECT * FROM MUJICA WHERE AGE IN (20,35,28);  -- 查询()内有的字段
 SELECT * FROM MUJICA WHERE NAME LIKE '___';  -- ''里一共三个下划线，一个_对应一个字符,'_花'，第一个随意字符，但第二个必须是花
 SELECT * FROM MUJICA WHERE NAME LIKE '花%';  -- %表示任意字符数，但是“花”必须在首位，'%花'就是花必须在末尾，'%花%'就是所有包含花的字段
 
+-- 聚合函数（null值不参与）,复合函数参考Stage04 DQL+.sql
+#格式：
+SELECT 聚合函数() FROM 表名;
+#例1：
+SELECT COUNT(*) FROM MUJICA; -- *是全体，就是在计算一共有多少条字段
+SELECT COUNT(ID) FROM MUJICA; -- 因为null值不参与，所有不会计算包含有null值的字段
+#例2：
+SELECT AVG(AGE) FROM MUJICA; -- 计算AGE的平均，avg就是average
+#例3：
+SELECT MAX(ID) FROM MUJICA; -- 不用多说了吧
+SELECT MIN(AGE) FROM MUJICA;
+#关键例4（组合where和聚合函数）：
+SELECT SUM(AGE) FROM MUJICA WHERE AGE > 19; -- 计算所有年龄大于19的人的年龄和
+SELECT AVG(AGE) FROM MUJICA WHERE AGE > 19; -- 计算所有年龄大于19的人的平均年龄
+
 
 
 
