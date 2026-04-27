@@ -33,4 +33,9 @@ NOT 取反 等效于!
 7. 正则匹配
 REGEXP '正则表达式'
 
-
+聚合函数：
+COUNT 数个数
+SUM 算总和
+AVG 算平均
+MAX/MIN 找最大最小
+GROUP_CONCAT 拼接多行文字
