@@ -7,3 +7,5 @@ SELECT AGE,COUNT(*) FROM MUJICA GROUP BY AGE; -- COUNT(*)的作用就是COUNT(*)
 #例2：
 SELECT AGE,AVG(AGE),COUNT(*) FROM MUJICA GROUP BY AGE; -- COUNT(*)可以不加，它的作用就是多一列显示不同年龄段各有多少。
 #例3：
+SELECT NAME,COUNT(*) FROM MUJICA WHERE AGE < 35 GROUP BY NAME; -- 统计年龄小于35岁的人的名字，和叫这个名字的人数
+
