@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="icon" type="image/png" href="gemini.png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .faker {
+            width: 500px;
+            height: 500px;
+            background-color: gray;   
+        }
+        .gumayusi{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            /* transform: translate(-50%, -50%) 的作用是将元素向左和向上移动自身宽高的一半，()内的顺序是先水平后垂直，正为向右和向下，负为向左和向上。结合 top: 50% 和 left: 50%，可以将元素的中心点定位在父容器的中心点，
+            从而实现元素的完全居中。top: 50% 和 left: 50% 将元素的左上角定位在父容器的中心点，然后通过 transform 将元素的中心点调整到这个位置，实现真正的居中效果。 */
+            scale: 2;
+             /* scale: 2 的作用是将元素的宽高都放大两倍。它会使元素的尺寸增加到原来的两倍，同时保持元素的内容和布局不变。scale 是 CSS 中的一个变换函数，可以用于缩放元素，数值为正时表示放大，数值为负时表示缩小。 */
+            rotate: 50deg;
+             /* rotate: 50deg 的作用是将元素顺时针旋转 50 度。rotate 是 CSS 中的一个变换函数，可以用于旋转元素，数值为正时表示顺时针旋转，数值为负时表示逆时针旋转。单位可以是度（deg）、弧度（rad）等。 */
+        }
+        .zeus{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top:300px;
+             /* top: 300px 的作用是将元素向下移动 300像素 */
+        }
+    </style>
+</head>
+<body>
+    <div class="faker">
+       <div class="zeus"></div>
+       <div class="gumayusi"></div>
+    </div>
+    <!-- 给元素设置 position: relative; 就是相对定位，它是相对于元素自身原本的位置进行偏移。 -->
+    <!-- 不脱离文档流：元素原来占的位置会保留，不会被其他元素挤占（这是和绝对定位最大区别）。
+    偏移参照物：只参考自己默认的位置，不是父级、不是页面。
+    偏移属性：配合 top / bottom / left / right 使用，数值为正就往对应方向反着移。
+    top: 10px → 向下移 10px
+    left: 10px → 向右移 10px
+    层级提升：可以设置 z-index 控制堆叠顺序。
+    核心用途：给子元素绝对定位做 “父容器”（子绝父相），也可做小幅度位置微调 -->
+</body>
+</html>
