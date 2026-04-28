@@ -1,0 +1,48 @@
+绝对定位：
+1. 基本概念
+属性值：position: absolute;
+定义：元素脱离正常文档流，相对于最近的已定位祖先元素定位；若无则相对于 ** 根元素（html/body）** 定位。
+特点：不占原位置，后面元素会 “顶上来”。
+2. 定位规则
+必须配合定位属性使用：top / right / bottom / left
+层级控制：z-index（数值越大越在上，需同层级定位）
+3. 关键：定位参考点
+父 / 祖先有 position: relative/absolute/fixed/sticky → 相对该祖先
+所有祖先都未定位 → 相对浏览器窗口 / 文档
+4. 常用效果
+（1）子元素相对父元素定位
+css
+.parent {
+  position: relative; /* 父级设定位 */
+}
+.child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+（2）水平垂直居中
+css
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+（3）全屏覆盖层
+css
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+5. 与其他定位对比
+static：默认，无定位
+relative：相对自身原位置，不脱流
+absolute：脱流，相对已定位祖先
+fixed：脱流，相对视口（滚动不移动）
+6. 高频注意点
+绝对定位会宽高塌陷，需手动设宽或拉伸（left:0; right:0）
+会使元素变成块级，可设置宽高、内外边距
+避免滥用，布局优先 Flex / Grid
