@@ -1,1 +1,105 @@
+绝对定位：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="icon" type="image/png" href="gemini.png">
+    <style>
+        div.faker{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+        }
+        img{
+            width:400px;
+            object-fit: cover;
+            /* object的fit属性规定了图像如何适应其容器。cover值会保持图像的宽高比，
+            并将图像缩放到足够大以完全覆盖容器。图像可能会被裁剪以适应容器的尺寸。 */
+
+        }
+        div.zeus{
+            position: absolute;
+            width: 100%;
+            top: 0;left: 0;
+            background-color: rgba(0, 0, 0, 0.400);
+            font-size: 50px;color: rgba(255,255,255,0.400);text-align: center;line-height: 500px;
+            display: none;
+        }
+
+        div.faker:hover div.zeus{
+            display: block;
+        }
+        div.faker:hover img{
+            filter: blur(2px); 
+            /* filter属性用于应用图形效果，如模糊或颜色偏移。blur(2px)会将图像模糊化，模糊程度为2像素。 */
+        }
+    </style>
+</head>
+<body>
+    <div class="faker">
+        <img src="m0nesy.jpg" alt="" class="monesy">
+       <div class="zeus">黄色闪光m0NESY</div>
+       <div class="gumayusi"></div>
+    </div>
+    
+</body>
+</html>
+固定定位：
+fixed 固定定位 极简总结
+参照物：浏览器视口（可视窗口），和父级元素无关
+脱离标准文档流：不占普通文档空间，元素悬浮
+定位属性：靠 top / bottom / left / right 控制位置
+核心特性：
+页面滚动时，位置固定不动
+层级高于普通文档流，可配合 z-index 控制堆叠
+不受 relative 父级限制
+常用场景：顶部导航、悬浮按钮、回到顶部、弹窗固定遮罩
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="icon" type="image/png" href="gemini.png">
+    <style>
+     div.faker{
+        border: 1px solid black;
+        width: 500px;
+        height: 500px;
+        position:fixed;
+        /* 固定定位：元素相对于浏览器窗口进行定位，即使页面滚动，元素也会保持在相同的位置。 */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* 设置在浏览器窗口的中心位置。left: 50%和top: 50%将元素的左上角定位在窗口的中心，
+        然后通过transform: translate(-50%, -50%)将元素向左和向上移动自身宽高的一半，使其真正居中显示。 */
+
+     }
+     img.monesy{
+        width: 100%;
+        height: 100%;
+        /* 宽和高都设置成100%，图片会自动适应父元素的大小，保持原有的宽高比。 */
+     }
+     div.zeus{
+        position:absolute;
+        right:10px;top:10px;
+        color: red;
+        cursor: pointer;
+        /* 鼠标悬停时显示为手指，表示该元素是可点击的。 */
+    }
+
+    </style>
+</head>
+<body>
+    <div class="faker">
+        <img src="m0nesy.jpg" alt="" class="monesy">
+       <div class="zeus">黄色闪光m0NESY</div>
+       <div class="gumayusi"></div>
+    </div>
+    
+</body>
+</html>
 
