@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project01</title>
+    <link rel="icon" type="image/x-icon" href="photo/gemini.png">
+    <link rel="stylesheet" href="fazeclan.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-left">
+            <a href="">player</a>
+            <a href="">top</a>
+            <a href="">result</a>
+            <a href="">community</a>
+        </div>
+
+        <div class="header-right">
+            <a href="">download</a>
+            <a href="">market</a>
+            
+            <a href="">team
+                <div class="monesy">
+                    <div class="kyousuke">
+                        <span>选手1 京介</span>
+                        <div>
+                            <span>×</span>
+                            <span>√</span>
+                        </div>
+                    </div>
+                    <div class="kyousuke">
+                        <span>选手2 niko</span>
+                        <div>
+                            <span>×</span>
+                            <span>√</span>
+                        </div>
+                    </div>
+                    <div class="kyousuke">
+                        <span>选手3 karrigen</span>
+                        <div>
+                            <span>×</span>
+                            <span>√</span>
+                        </div>
+                    </div>
+                    <div class="kyousuke">
+                        <span>选手4 teses</span>
+                        <div>
+                            <span>×</span>
+                            <span>√</span>
+                        </div>
+                    </div>
+                    <div class="kyousuke">
+                        <span>选手5 m0NESY</span>
+                        <div>
+                            <span>×</span>
+                            <span>√</span>
+                        </div>
+                    </div>
+                    <div class="kyousuke">
+                        <span>选手6 zonic</span>
+                        <div>
+                            <span>×</span>
+                            <span>√</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="">option</a>
+        </div>
+    </div>
+
+    <div class="bgimg"></div>
+
+    <div class="content">
+        <div class="img">
+            <a href="">
+                <img src="photo\m0NESY.webp" alt="m0NESY">
+                <span>选手m0NESy</span>
+                <span>转会费:$ 2000 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\nikola.webp" alt="niko">
+                <span>选手niko</span>
+                <span>转会费:$ 1500 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\teses.webp" alt="teses">
+                <span>选手teses</span>
+                <span>转会费:$ 1000 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\karrigen.webp" alt="karrigen">
+                <span>选手karrigen</span>
+                <span>转会费:$ 1500 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\kyousuke.webp" alt="kyousuke">
+                <span>选手kyousuke</span>
+                <span>转会费:$ 2000 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\apex.webp" alt="apex">
+                <span>选手apex</span>
+                <span>转会费:$ 100 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\zywoo.webp" alt="zywoo">
+                <span>选手zywoo</span>
+                <span>转会费:$ 20000 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\ropz.webp" alt="ropz">
+                <span>选手ropz</span>
+                <span>转会费:$ 3000 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\flamez.webp" alt="flamez">
+                <span>选手flamez</span>
+                <span>转会费:$ 1500 K</span>    
+            </a>
+        </div>
+         <div class="img">
+            <a href="">
+                <img src="photo\mezii.webp" alt="mezii">
+                <span>选手mezii</span>
+                <span>转会费:$ 500 K</span>    
+            </a>
+        </div>
+    </div>
+
+    <div class="ad">
+        <a href="">
+            <img src="photo/aaaaa.webp" alt="">
+        </a>
+        <span id="close">×</span>
+    </div>
+
+<!-- 广告关闭JS ↓↓↓ -->
+<script>
+  const closeBtn = document.getElementById('close');
+  const adBox = document.querySelector('.ad');
+  closeBtn.onclick = function(){
+    adBox.style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
+
+
+
+css：
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 顶部导航 */
+div.header {
+    background-color: rgb(49, 54, 63);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 垂直居中 */
+    position: relative; /* 让子元素绝对定位相对于它 */
+}
+
+div.header a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    transition: all 0.25s linear;
+}
+
+div.header a:hover {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 左侧导航 */
+div.header-left {
+    display: flex;
+    align-items: center;
+}
+div.header-left a {
+    margin-right: 30px;
+}
+div.header-left a:first-child {
+    margin-left: 60px;
+}
+
+/* 右侧导航 */
+div.header-right {
+    display: flex;
+    align-items: center;
+}
+div.header-right a {
+    margin-right: 30px;
+}
+
+/* 购物车弹出层 —— 修复重点 */
+div.monesy {
+    width: 225px;
+    background-color: rgba(0, 0, 0, 0.672);
+    height: 300px;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-y: auto;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    display: none; /* 默认隐藏！ */
+    z-index: 999;
+}
+
+/* hover 显示购物车 */
+div.header-right a:hover .monesy {
+    display: block;
+}
+
+/* 滚动条隐藏 */
+div.monesy::-webkit-scrollbar {
+    display: none;
+}
+
+/* 每一行选手 —— 这里才用 flex！ */
+div.kyousuke {
+    display: flex;
+    justify-content: space-between; /* 左右分开 */
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 4px;
+    color: #fff;
+}
+
+div.kyousuke:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+/* 背景图 */
+div.bgimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("photo/m0nesy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+div.bgimg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.372);
+    top: 0;
+    left: 0;
+}
+
+/* 右下角广告 */
+div.ad {
+    width: 300px;
+    height: 300px;
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+div.ad span {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+div.ad span:hover {
+    color: red;
+}
+div.content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(15, 20, 30, 0.95);
+}
+div.content>div.img{
+    flex: 0 0 calc((100% - 10px*3) / 4); 
+}
+div.content>div.img:hover{
+    border:1px solid rgba(128,128,128,0.083);
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+}
+div.content>div.img>a{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+div.content div.img a>span:first-of-type:hover{
+    color: red;
+}
+@media screen and (max-width:860px) {
+    div.conten div.img{
+        flex: 0 0 calc((100% - 10px*2) / 3);
+        /* calc的作用是计算每个图片的宽度，100%表示父元素的宽度，10px*2表示每行有两个间距（3个图片之间有2个间距），除以3表示每行显示3个图片。 */
+    }
+}
+@media screen and (max-width:600px) {
+    div.content div.img{
+        flex: 0 0 calc((100% - 10px*1) / 2);
+    }
+    /* @media screen的作用是为了实现响应式设计，根据不同的屏幕宽度调整布局。在这个例子中，当屏幕宽度小于等于860px时，
+    每行显示3个图片；当屏幕宽度小于等于600px时，每行显示2个图片。这使得页面在不同设备上都能有良好的展示效果。 */
+}
