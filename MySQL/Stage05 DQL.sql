@@ -29,4 +29,5 @@ SELECT * FROM MUJICA LIMIT 10; -- 0可以省略，查询第一页的10条数据
 #例2：
 SELECT * FROM MUJICA ORDER BY ID LIMIT 20 , 10;  -- 分页查询可以和order by等结合，查询第三页，起始索引为（3-1）*10 
 
-
+#核心执行顺序：
+-- WHERE → GROUP BY → HAVING → ORDER BY → LIMIT 必须先写WHERE 再写GROUP BY 后写HAVING ······按这个顺序写。
