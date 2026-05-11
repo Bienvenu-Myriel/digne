@@ -1,3 +1,6 @@
+#核心执行顺序：
+-- WHERE → GROUP BY → HAVING → ORDER BY → LIMIT 必须先写WHERE 再写GROUP BY 后写HAVING ······按这个顺序写
+
 -- 1.查询年龄为18，19，20的男性。
 SELECT * FROM mujica WHERE AGE IN (18,19,20) AND GENDER ='男';
 
