@@ -5,7 +5,8 @@ SELECT * FROM  USER;
 #创建用户：
 CREATE USER '用户名'@'主机名' IDENTIFIED BY '密码'; -- 这里的密码是用户单独的密码而不是主机的密码
 #例：
-CREATE USER 'HUAHUA'@'LOCALHOST' IDENTIFIED BY '91HUAHUA'; 
+CREATE USER 'HUAHUA'@'LOCALHOST' IDENTIFIED BY '91HUAHUA';  -- 在powershall或者cmd里输入mysql -u HUAHUA -p 就可以直接访问了。
+
 
 #修改用户密码
 ALTER USER '用户名'@'主机名' IDENTIFIED WITH MYSQL_NATIVE_PASSWORD BY '新密码';
