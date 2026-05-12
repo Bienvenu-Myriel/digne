@@ -1,5 +1,6 @@
 
 召唤mysql可以通过在cmd或者powershell里输入：mysql -u root -p来实现
+输入exit（或者 quit）退出登陆
 
 基础语法：
 1.SQL语句可以单行或者多行书写，以分号（;）结尾。
