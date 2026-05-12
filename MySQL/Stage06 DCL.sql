@@ -23,9 +23,17 @@ SHOW GRANTS FOR '用户名'@'主机名';
 
 #授予权限
 GRANT 权限列表 ON 数据库名.表名 TO '用户名'@'主机名';
+#例1：
+GRANT SELECT ON MYGO.MUJICA TO 'HUAHUA'@'localhost'; 
+#例2：
+GRANT ALL ON MYGO.* TO 'HUAHUA'@'localhost';
 
 #撤销权限
 REVOKE 权限列表 ON 数据库名.表名 FROM '用户名'@'主机名';
+#例1：
+REVOKE ALL ON MYGO.MUJICA FROM 'HUAHUA'@'localhost'; -- 重难点！！！ 如果给与权限时是用 数据库.表 的格式来给的不能直接用 数据库.* 来删,但仍然可以通过ALL删除所有权限
+#例2：
+REVOKE ALL ON MYGO.* FROM 'HUAHUA'@'localhost';
 
 -- 权限一览：
 -- 全部权限：ALL / ALL PRIVILEGES    PRIVILEGES（单词的意思是权限）可省略
