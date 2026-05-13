@@ -23,7 +23,7 @@
     <script>
         let zeus = 0
         let gumayusi = 1
-        let chovy = 2
+        let chovy = '2'
         let keria = 'char'
         let faker = '花'
         document.write('zeus: ' + zeus + '<br>')
@@ -32,6 +32,10 @@
         document.write(`keria_类型为:${typeof keria}` + '<br>');
         document.write(`faker_类型为:${typeof faker}` + '<br>');
         // $符号和python里的f字符串类似，可以在字符串里直接使用变量，前提是字符串要用反引号（`）包裹起来
+        console.log(gumayusi+chovy)
+        // java里的字符串能和数字通过+号拼接，这是python不能做到的
+
+       
     </script>
 </body>
 </html>
