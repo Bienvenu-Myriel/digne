@@ -75,12 +75,28 @@ SELECT NAME,DATEDIFF(CURDATE(),ENTRYDATE) AS 'ENTRYDAYS' FROM MUJICA ORDER BY EN
 
 #流程控制函数(重中之重)：
 -- IF(VALUE,T,F)            如果VALUE为TRUE,则返回T，否则返回F
--- IFNULL(VALUE1,VALUE2)    如果 VALUE1 为空，返回 VALUE2；不为空返回 VALUE1
+-- IFNULL(VALUE1,VALUE2)    如果 VALUE1 为空（null），返回 VALUE2；不为空返回 VALUE1
 -- CASE WHEN [VALUE1] THEN [RES1] ... ELSE [DEFAULT] END          如果VALUE为true，返回RES1否则返回默认DEFAULT
 -- CASE [EXPR] WHEN [VALUE1] THEN [RES1] ... ELSE [DEFAULT] END   如果EXPR的值等于VALUE1，那么返回RES1,否则返回DEFAULT默认值
 
+#案例：
+SELECT IF(FALSE,'HUAHUA','ERROR');
 
+SELECT IFNULL('91','SAKI!');  -- 注意空字符串仍然不是null。
+SELECT IFNULL('','SAKI!');    --会返回空字符串
+SELECT IFNULL(NULL,'SAKI!');  --会返回'SAKI!'
 
+#实例：
+-- 查询mujica里成员的姓名和学校，如果是（月之森和羽丘则-->少女乐队学校，其他学校-->普通学校）
+SELECT NAME,(CASE SCHOOL WHEN '月之森' THEN '少女乐队学校' WHEN '羽丘' THEN '少女乐队学校' ELSE '其他学校' END) FROM mujica;  -- ()是为了优先执行case函数
+-- 也可以这么写
+SELECT 
+  NAME,
+  CASE 
+    WHEN SCHOOL IN ('月之森','羽丘') THEN '少女乐队学校'
+    ELSE '其他学校'
+  END
+FROM mujica;  -- 更优雅
 
 
 
