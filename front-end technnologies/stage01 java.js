@@ -43,3 +43,65 @@
     </script>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        table{
+            border-collapse: collapse;
+            width: 500px;
+        }
+        table td{
+            border: 1px solid black;
+            
+            text-align: center;
+        }
+        table th{
+            border: 1px solid black;
+            background-color: gray;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <table>
+    <thead>
+        <tr>
+            <th>选手名称</th>
+            <th>选手转会价格</th>
+            <th>top排名</th>
+            <th>mvp数</th>
+            <th>major数</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>m0nesy</td>
+            <td>200w</td>
+            <td>top4</td>
+            <td>7</td>
+            <td>0</td>
+        </tr>
+    </tbody>
+   </table>
+    <script>
+        let product_name = prompt("请输入选手名称");
+        let product_price = prompt("请输入选手转会价格");
+        let product_top = prompt("请输入选手top排名");
+        let product_mvp = prompt("请输入选手mvp数");
+        let product_major = prompt("请输入选手major数");
+       
+    </script>
+</body>
+</html>
