@@ -75,7 +75,14 @@
     </style>
 </head>
 <body>
-   <table>
+   
+    <script>
+        let product_name = prompt("请输入选手名称");
+        let product_price = prompt("请输入选手转会价格");
+        let product_top = prompt("请输入选手top排名");
+        let product_mvp = prompt("请输入选手mvp数");
+        let product_major = prompt("请输入选手major数");
+       document.write(`<table>
     <thead>
         <tr>
             <th>选手名称</th>
@@ -87,21 +94,14 @@
     </thead>
     <tbody>
         <tr>
-            <td>m0nesy</td>
-            <td>200w</td>
-            <td>top4</td>
-            <td>7</td>
-            <td>0</td>
+            <td>${product_name}</td>
+            <td>${product_price}</td>
+            <td>${product_top}</td>
+            <td>${product_mvp}</td>
+            <td>${product_major}</td>
         </tr>
     </tbody>
-   </table>
-    <script>
-        let product_name = prompt("请输入选手名称");
-        let product_price = prompt("请输入选手转会价格");
-        let product_top = prompt("请输入选手top排名");
-        let product_mvp = prompt("请输入选手mvp数");
-        let product_major = prompt("请输入选手major数");
-       
+   </table>`)
     </script>
 </body>
 </html>
