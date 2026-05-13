@@ -1,3 +1,4 @@
+#字符函数：
 -- CONCAT(S1,S2,...Sn)	字符串拼接，将 S1, S2, ... Sn 拼接成一个字符串
 -- LOWER(str)	将字符串 str 全部转为小写
 -- UPPER(str)	将字符串 str 全部转为大写
@@ -20,3 +21,28 @@ SELECT RPAD('HUAHUA',9,'91');
 SELECT TRIM('  HUA  HUA '); -- 只除去头尾的空格，中间的空格不动
 
 SELECT SUBSTRING('91HUAHUA',1,6); -- 保留第一到第六个字符串
+
+#实操：
+UPDATE MUJICA SET ID = LPAD(ID, 2, '0') WHERE LENGTH(ID) < 2; -- 把mujica的ID不足两位数的字符串在左侧加一个0
+
+#数值函数：
+-- CEIL(X) 向上取整
+-- FLOOR(X) 向下取整
+-- MOD(X,Y) 返回X/Y的模，模就是余数
+-- RAND()   返回0~1内的随机数
+-- ROUND(X,Y) 求参数X，四舍五入的值，保留Y位小数
+
+#案例：
+SELECT CEIL(1.8);
+SELECT FLOOR(1.1);
+
+SELECT MOD(3,4); -- 就是3/4取余数，得到3
+
+SELECT RAND(); -- 会有多位小数
+
+SELECT ROUND(3.14,2);
+
+#实操：
+-- 通过RAND()生成一个随机六位验证码
+SELECT LPAD(FLOOR(RAND()*1000000),6,'0'); -- 函数可以包裹函数
+
