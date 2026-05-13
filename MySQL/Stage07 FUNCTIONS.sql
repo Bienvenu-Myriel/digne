@@ -46,3 +46,42 @@ SELECT ROUND(3.14,2);
 -- 通过RAND()生成一个随机六位验证码
 SELECT LPAD(FLOOR(RAND()*1000000),6,'0'); -- 函数可以包裹函数
 
+#日期函数：
+-- CURDATE()   返回当前日期
+-- CURTIME()   返回当前时间
+-- NOW()       返回当前日期和时间
+-- YEAR(DATE)  获取指定date的年份
+-- MONTH(DATE) 获取指定date的月份
+-- DAY(DATE)   获取指定date的日期
+-- DATE_ADD(DATE,INTERVAL EXPR TYPE)   返回上一个日期/时间值加上一个时间间隔expr后的时间值
+-- DATEDIFF(DATE1,DATE2)               返回起始时间date1和结束时间date2之间的天数
+
+#案例：
+SELECT CURDATE();
+SELECT CURTIME();
+SELECT NOW();
+
+SELECT YEAR(NOW());
+SELECT MONTH(NOW();
+SELECT DAY(NOW();
+
+SELECT DATE_ADD(NOW(),INTERVAL 40 DAY); -- 往后推 40 个day
+SELECT DATE_ADD(NOW(),INTERVAL 40 MONTH); -- 往后推40个月
+
+SELECT DATEDIFF('2026-5-13','2077-4-6'); -- DATEDIFF 只认横杠格式，必须使用-来连接年月日
+#实例：
+-- 查询表mujica里所有入团天数并按倒叙排序
+SELECT NAME,DATEDIFF(CURDATE(),ENTRYDATE) AS 'ENTRYDAYS' FROM MUJICA ORDER BY ENTRYDAYS DESC;
+
+#流程控制函数(重中之重)：
+-- IF(VALUE,T,F)            如果VALUE为TRUE,则返回T，否则返回F
+-- IFNULL(VALUE1,VALUE2)    如果 VALUE1 为空，返回 VALUE2；不为空返回 VALUE1
+-- CASE WHEN [VALUE1] THEN [RES1] ... ELSE [DEFAULT] END          如果VALUE为true，返回RES1否则返回默认DEFAULT
+-- CASE [EXPR] WHEN [VALUE1] THEN [RES1] ... ELSE [DEFAULT] END   如果EXPR的值等于VALUE1，那么返回RES1,否则返回DEFAULT默认值
+
+
+
+
+
+
+
