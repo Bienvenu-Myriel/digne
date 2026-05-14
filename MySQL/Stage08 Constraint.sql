@@ -26,6 +26,19 @@ CREATE TABLE 表名(
 ); -- 直接创建有外键的表
 
 ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY(外键字段名)REFERENCES 主表(主表列名); -- 给表增加一个外键关联
+#例：
+ALTER TABLE AVE_MUJICA ADD CONSTRAINT FRKEY FOREIGN KEY(DEPT_ID)REFERENCES user(ID); -- 可以关闭AVE_MUJICA重新打开看到关联的蓝色小钥匙出现在表单的字段左下角（黄色小钥匙是主键，蓝色是外键）
 
+ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;
+#例：
+ALTER TABLE AVE_MUJICA DROP FOREIGN KEY FRKEY; -- 注意外键名称是什么！！！
+
+#外键的更新/删除行为
+
+-- | NO ACTION  | 当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除/更新。 (与 RESTRICT 一致) 
+-- | RESTRICT   | 当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除/更新。 (与 NO ACTION 一致) 
+-- | CASCADE    | 当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有，则也删除/更新外键在子表中的记录。 
+-- | SET NULL   | 当在父表中删除对应记录时，首先检查该记录是否有对应外键，如果有则设置子表中该外键值为null（这就要求该外键允许取null）。 
+-- | SET DEFAULT| 父表有变更时，子表将外键列设置成一个默认的值 (Innodb不支持)          
 
 
