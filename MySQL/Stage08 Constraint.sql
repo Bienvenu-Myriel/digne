@@ -25,10 +25,12 @@ CREATE TABLE 表名(
   [CONSTRAINT][外键名称] FOREIGN KEY(外键字段名) REFERENCES 主表(主表列名)
 ); -- 直接创建有外键的表
 
+#格式：
 ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY(外键字段名)REFERENCES 主表(主表列名); -- 给表增加一个外键关联
 #例：
 ALTER TABLE AVE_MUJICA ADD CONSTRAINT FRKEY FOREIGN KEY(DEPT_ID)REFERENCES user(ID); -- 可以关闭AVE_MUJICA重新打开看到关联的蓝色小钥匙出现在表单的字段左下角（黄色小钥匙是主键，蓝色是外键）
 
+#格式：
 ALTER TABLE 表名 DROP FOREIGN KEY 外键名称;
 #例：
 ALTER TABLE AVE_MUJICA DROP FOREIGN KEY FRKEY; -- 注意外键名称是什么！！！
@@ -40,5 +42,25 @@ ALTER TABLE AVE_MUJICA DROP FOREIGN KEY FRKEY; -- 注意外键名称是什么！
 -- | CASCADE    | 当在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有，则也删除/更新外键在子表中的记录。 
 -- | SET NULL   | 当在父表中删除对应记录时，首先检查该记录是否有对应外键，如果有则设置子表中该外键值为null（这就要求该外键允许取null）。 
 -- | SET DEFAULT| 父表有变更时，子表将外键列设置成一个默认的值 (Innodb不支持)          
+
+#外键的更新删除行为格式：
+ALTER TABLE 表名 ADD CONSTRAINT 外键名称 FOREIGN KEY(外键字段) REFERENCES 主表名(主表字段名) ON UPDATE 外键更新/删除 ON DELETE 外键更新/删除;  
+
+#例1：
+ALTER TABLE AVE_MUJICA ADD CONSTRAINT FRKEY FOREIGN KEY(DEPT_ID)REFERENCES user(ID) ON UPDATE CASCADE ON DELETE CASCADE;  -- 把ID和DEPT_ID设置 ON UPDATE CASCADE 级联更新，即id的变化会直接影响DEPT_ID
+#例2：
+ALTER TABLE AVE_MUJICA ADD CONSTRAINT FRKEY FOREIGN KEY(DEPT_ID)REFERENCES user(ID) ON UPDATE SET NULL ON DELETE SET NULL;  -- 父表删除关联内容时，把子表的值设置为null
+
+
+
+
+
+
+
+
+
+
+
+
 
 
