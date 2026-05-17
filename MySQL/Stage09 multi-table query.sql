@@ -4,39 +4,47 @@ SELECT * FROM team,player WHERE team.id = player.player_id;  -- 语法是 表.�
 
 -- =======================
 
-#Join Query(连接查询)
--- INNER JOIN(内连接)：Queries the intersection of two tables(查询A,B交集部分数据)
--- OUTER JOIN(外连接)：Left / Right / Full Outer Join(A或B的全部+A与B的并集)
--- SELF JOIN(自连接)：Must use aliases, query within the same table（必须使用别名，同表互查）
+#Join_Query(连接查询)
+-- INNER_JOIN(内连接)：Queries the intersection of two tables(查询A,B交集部分数据)
+-- OUTER_JOIN(外连接)：Left / Right / Full Outer Join(A或B的全部+A与B的并集)
+-- SELF_JOIN(自连接)：Must use aliases, query within the same table（必须使用别名，同表互查）
 
 -- =======================
   
-#Implicit Inner Join(隐式内连接)
+#Implicit_Inner_Join(隐式内连接):
+  
 SELECT 字段列表 FROM 表1,表2 WHER 条件...;  -- 字段列表(field list) 
 #Case(案例):
 -- 查询每一个player的名字和team的名称(使用Implicit Inner Join)
 SELECT player.player_name,team.name FROM player,team WHERE team.id = player.player_id; -- Join using foreign key(外键): player.team_id references team.id
 SELECT P.player_name,T.name FROM player AS P , team T WHERE T.id = P.player_id;  -- as can be omitted(省略)
 
-#Explicit Inner Join（显式内连接）
+#Explicit_Inner_Join（显式内连接:
+  
 SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON join_condition（连接条件）...；
 #Case:
 SELECT T.name,P.player_name FROM team T JOIN player P ON T.id = P.player_id; -- 内连接不用在意Put primary tables(也可以翻译为main tables 都是主表) before joined child tables（子表），但是外连接刚性需要这么做.
 
 -- =======================
 
-#Left Outer Join(左外连接):
+#Left_Outer_Join(左外连接):
 SELECT field_list(字段列表) FROM list1(表1) LEFT[OUTER] JOIN list2 ON join_condition(连接条件)...;  -- It returns all data from list1, together with the intersecting(交集) data from list2.（相当于查询list1的所有数据加上list1和list2的交集部分数据）   
 #Case:
 SELECT T.*,P.player_name FROM team T LEFT OUTER JOIN player P ON T.id = P.player_id;  -- Query all records from the team table, together with their associated player_name information.
 
-#Right Outer Join(右外连接):
+#Right_Outer_Join(右外连接):
 SELECT field_list FROM list1 RIGHT [OUTER] JOIN list2 ON join_condition...; -- It returns all data from list2, together with the intersecting(交集) data from list1.
 #Case:
 SELECT T.name,P.* FROM team T RIGHT JOIN player P ON T.id = P.player_id;   -- Query all records from the player table, together with their associated team name information.
 
+-- ========================
+#Self_Join:
 
-
+SELECT field_list FROM list1 alias_B(别名B)  ON join_condition...;  -- Self-join queries can be either inner join queries or outer join queries.(自我连接查询可以是内查询也可以是外查询)
+#Case:
+SELECT A.player_name,B.top FROM player A,player B WHERE A.id = B.top ;  -- Self-joins do not require foreign key constraints, but they do need a column that references the id of the same table.
+-- （自连接不需要外键约束 但必须有一个字段指向本表的 id）
+SELECT A.player_name'选手',B.top'top位' FROM player A,player B WHERE A.id = B.top ;
 
 
 -- ========================
