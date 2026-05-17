@@ -1,13 +1,13 @@
 -- multi-table query(多表查询)
-SELECT * FROM team,player;  -- 多表查询，有笛卡尔积（两张表的结合）
-SELECT * FROM team,player WHERE team.id = player.player_id;  -- 语法是 表.外键关联数据 以消除笛卡尔积 
+SELECT * FROM team,player;  -- 多表查询，有Cartesian Product (笛卡尔积)（两张表的结合）
+SELECT * FROM team,player WHERE team.id = player.player_id;  -- 语法是 表.外键关联数据 以消除Cartesian Product
 
 -- =======================
 
 #Join Query(连接查询)
--- INNER JOIN(内连接)：相当于查询A,B交集部分数据
--- OUTER JOIN(外连接)：查询A与B的并集但是去掉AB(A,B的交集)
--- SELF JOIN(自连接)：必须使用别名，同表互查
+-- INNER JOIN(内连接)：Queries the intersection of two tables(查询A,B交集部分数据)
+-- OUTER JOIN(外连接)：Left / Right / Full Outer Join(A或B的全部+A与B的并集)
+-- SELF JOIN(自连接)：Must use aliases, query within the same table（必须使用别名，同表互查）
 
 -- =======================
   
@@ -19,7 +19,7 @@ SELECT player.player_name,team.name FROM player,team WHERE team.id = player.play
 SELECT P.player_name,T.name FROM player AS P , team T WHERE T.id = P.player_id;  -- as can be omitted(省略)
 
 #Explicit Inner Join（显式内连接）
-SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON 连接条件...；
+SELECT 字段列表 FROM 表1 [INNER] JOIN 表2 ON join_condition（连接条件）...；
 #Case:
 SELECT T.name,P.player_name FROM team T JOIN player P ON T.id = P.player_id; -- 内连接不用在意Put primary tables(也可以翻译为main tables 都是主表) before joined child tables（子表），但是外连接刚性需要这么做.
 
