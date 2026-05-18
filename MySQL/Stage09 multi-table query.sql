@@ -70,7 +70,7 @@ VALUES
 CREATE TABLE player (
     id INT PRIMARY KEY AUTO_INCREMENT,
     player_name VARCHAR(50) NOT NULL,
-    top VARCHAR(10) NOT NULL,       -- '1','2',...,'20+'
+    top INT(10) NOT NULL,       -- '1','2',...,'20+'
     team VARCHAR(50) NOT NULL,
     age INT NOT NULL,
     role VARCHAR(30) NOT NULL,
@@ -88,7 +88,7 @@ VALUES
 ('ZywOo',    '1',    'Vitality', 24, '狙击手',        1),
 ('ropz',     '3',    'Vitality', 25, '自由人/步枪手',  1),
 ('flameZ',   '7',    'Vitality', 21, '突破手',        1),
-('apEX',     '20+',  'Vitality', 31, '指挥/步枪手',    1),
+('apEX',     '39',  'Vitality', 31, '指挥/步枪手',    1),
 ('mezii',    '12',   'Vitality', 26, '步枪手',        1),
 
 -- ==============================================
@@ -96,24 +96,24 @@ VALUES
 -- ==============================================
 ('b1t',      '20',   'NAVI',     23, '步枪手',        2),
 ('iM',       '19',   'NAVI',     22, '步枪手',        2),
-('Aleksib',  '20+',  'NAVI',     28, '指挥',          2),
-('w0nderful','20+',  'NAVI',     21, '狙击手',        2),
-('makazze',  '20+',  'NAVI',     20, '步枪手',        2),
+('Aleksib',  '50',  'NAVI',     28, '指挥',          2),
+('w0nderful','31',  'NAVI',     21, '狙击手',        2),
+('makazze',  '255',  'NAVI',     20, '步枪手',        2),
 
 -- ==============================================
 -- Falcons (team.id=3)
 -- ==============================================
 ('m0NESY',   '4',    'Falcons',  22, '狙击手',        3),
-('NiKo',     '20+',  'Falcons',  28, '步枪手/指挥',   3),
-('kyxsan',   '20+',  'Falcons',  25, '指挥',          3),
-('TeSeS',    '20+',  'Falcons',  26, '步枪手',        3),
-('kyousuke', '20+',  'Falcons',  17, '步枪手',        3),
+('NiKo',     '18',  'Falcons',  28, '步枪手/指挥',   3),
+('kyxsan',   '277',  'Falcons',  25, '指挥',          3),
+('TeSeS',    '288',  'Falcons',  26, '步枪手',        3),
+('kyousuke', '99',  'Falcons',  17, '步枪手',        3),
 
 -- ==============================================
 -- Spirit (team.id=4)
 -- ==============================================
 ('donk',     '2',    'Spirit',   18, '狙击手/突破手', 4),
 ('sh1ro',    '5',    'Spirit',   22, '狙击手',        4),
-('magixx',   '20+',  'Spirit',   21, '步枪手',        4),
-('tN1R',     '20+',  'Spirit',   23, '步枪手',        4),
-('zont1x',   '20+',  'Spirit',   22, '步枪手',4);
+('magixx',   '205',  'Spirit',   21, '步枪手',        4),
+('tN1R',     '241',  'Spirit',   23, '步枪手',        4),
+('zont1x',   '122',  'Spirit',   22, '步枪手',4);
