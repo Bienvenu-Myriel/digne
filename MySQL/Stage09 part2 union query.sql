@@ -34,4 +34,4 @@ Query player information with the same top ranking and age as the player "m0NESY
 #Case:
 -- Query the information of players ranked within the top 20, along with their team information.(查询位于top20内的选手信息及其团队信息)
 SELECT * FROM (SELECT * FROM player WHERE top < 20) top20 LEFT JOIN team T ON top20.player_id = T.id;
--- Use derived table subquery together with left join for data query.
+-- Use derived table subquery together with left join for data query.  (SELECT * FROM player WHERE top < 20)这一部分作为派生表
