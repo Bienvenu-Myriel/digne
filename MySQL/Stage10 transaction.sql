@@ -1,3 +1,6 @@
+#Start_transaction
+START TRANSACTION; 
+
 #View/Set transaction commit mode(查看/设置事物提交方式)
 SELECT @@AUTOCOMMIT;
 SET @@AUTOCOMMIT=0;  -- Set manual submission(设置手动提交)
@@ -7,6 +10,15 @@ COMMIT;
 
 #Rollback(回滚):
 ROLLBACL;
+
+-- =======================================
+
+--  Show transaction isolation level(查看事务隔离级别)
+SELECT @@TRANSACTION_ISOLATION;
+
+--  Set transaction isolation level (设置事务隔离级别)
+SET [SESSION|GLOBAL] TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITTED | REPEATABLE READ | SERIALIZABLE}
+
 
 -- =======================================
 Database Transaction Isolation Phenomena & Levels (English Version)
@@ -54,4 +66,8 @@ Serializable: Eliminate all three anomalies; lowest performance
 3.可重复读(MySQL默认)：解决脏读、不可重复读，剩 幻读
 4.串行化：全部解决，性能最差
 
-请给我英语版本的表述
+读未提交 = Read Uncommitted
+读已提交 = Read Committed
+可重复读 = Repeatable Read
+串行化 = Serializable
+
