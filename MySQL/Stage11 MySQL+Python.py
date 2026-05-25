@@ -12,7 +12,7 @@ conn = pymysql.connect(
 
 cur = conn.cursor() #Get cursor object(获取游标对象)
 
-cur.execute('select * from users')  #Execute SQL statement with cursor object(使用游标对象执行sql语句（可以不写;）)
+cur.execute('select * from player')  #Execute SQL statement with cursor object(使用游标对象执行sql语句（可以不写;）)
 
 # Obtain query results
 results:tuple = cur.fetchall()
