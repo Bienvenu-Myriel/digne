@@ -47,7 +47,15 @@
         //通过classList属性可以获取元素的类名列表，也可以修改元素的类名列表，add方法添加类名，remove方法删除类名，toggle方法切换类名
         father.className = "father new-class"; //直接覆盖原有的类名
         father.classList.add("another-class"); //添加一个新的类名
-        //
+        //创建一个新的元素
+        const newElement = document.createElement("p");
+        //在js里绑定事件
+        <button onclick="alert('按钮被点击了')">点击我</button>
+        //事件监听
+        newElement.addEventListener("click", () => {
+            alert("段落被点击了");
+        });
+        
     </script>
     
     
